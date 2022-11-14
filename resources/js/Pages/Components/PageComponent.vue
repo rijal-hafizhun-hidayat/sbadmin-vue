@@ -16,6 +16,6 @@ import ScrollToTopButton from './ScrollToTopButton.vue'
 import SideBar from './SideBar.vue'
 export default {
     components: { SideBar, Content, ScrollToTopButton, LogOut },
-    name: 'ParentComponent'
+    name: 'PagetComponent'
 }
 </script>
