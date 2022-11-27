@@ -4,14 +4,14 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-text mx-3">Profile-APP</div>
+            <div class="sidebar-brand-text mx-3">ZIS-APP</div>
         </a>
 
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
+        <li class="nav-item ">
             <a class="nav-link" href="index.html">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
@@ -30,13 +30,17 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                 aria-expanded="true" aria-controls="collapseUtilities">
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>Profile</span>
+                <span>Zakat</span>
             </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+            <div id="collapseUtilities" class="collapse" :class="{show: isShow}" aria-labelledby="headingUtilities"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">List Tools:</h6>
-                    <a class="collapse-item" href="utilities-color.html">Data</a>
+                    <!-- <a class="collapse-item" href="#">Data</a> -->
+                    <Link class="collapse-item" :class="{ active: isActiveZakat }" href="/zakat">Data</Link>
+                    <Link class="collapse-item" :class="{ active: isActiveZakatPelaporan }" href="/zakat/pelaporan">Pelaporan</Link>
+                    <Link class="collapse-item" :class="{ active: isActiveZakatPengambilan }" href="/zakat/pengambilan">Pengambilan</Link>
+                    <!-- <a class="collapse-item" href="#">Pelaporan</a> -->
                 </div>
             </div>
         </li>
@@ -45,16 +49,28 @@
         <hr class="sidebar-divider">
 
         <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
+        <!-- <div class="text-center d-none d-md-inline">
             <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
+        </div> -->
 
     </ul>
 <!-- End of Sidebar -->
 </template>
 
 <script>
+import { Link } from '@inertiajs/inertia-vue3'
 export default {
-    name: 'SideBar'
+    name: 'SideBar',
+    components: { Link },
+    props:{
+        isActiveZakatPelaporan: Boolean,
+        isActiveZakat: Boolean,
+        isShow: Boolean,
+        isActiveZakatPengambilan: Boolean
+    },
+    setup(props){
+        console.log(props.isActiveZakatPelaporan)
+        console.log(props.isActiveZakat)
+    }
 }
 </script>

@@ -4,7 +4,7 @@
             <NavBar />
             <div class="container-fluid">
                 <!-- Page Heading -->
-                <TableProfile :datas="datas"/>
+                <TableZakat />
             </div>
         </div>
         <Footer />
@@ -13,13 +13,10 @@
 <script>
 import NavBar from '../../Components/NavBar.vue'
 import Footer from '../../Components/Footer.vue'
-import TableProfile from './TableProfile.vue'
+import TableZakat from './TableZakat.vue'
 import { onMounted } from '@vue/runtime-core'
 export default {
-    components: { NavBar, Footer, TableProfile },
-    name: 'DataProfile',
-    props: {
-        datas: Object,
-    }
+    components: { NavBar, Footer, TableZakat },
+    name: 'DataZakat',
 }
 </script>

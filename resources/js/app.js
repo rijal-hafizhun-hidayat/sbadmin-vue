@@ -3,6 +3,8 @@ require('./bootstrap');
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/inertia-vue3'
 import { InertiaProgress } from '@inertiajs/progress'
+import NProgress from 'nprogress'
+import { Inertia } from '@inertiajs/inertia'
 
 createInertiaApp({
     resolve: name => require(`./Pages/${name}`),
@@ -14,3 +16,5 @@ createInertiaApp({
 })
 
 InertiaProgress.init()
+Inertia.on('start', () => NProgress.start())
+Inertia.on('finish', () => NProgress.done())
