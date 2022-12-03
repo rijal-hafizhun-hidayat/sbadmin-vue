@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Zakat extends Migration
+class Infaq extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class Zakat extends Migration
      */
     public function up()
     {
-        Schema::create('zakat', function (Blueprint $table) {
+        Schema::create('infaq', function (Blueprint $table) {
             $table->id();
-            $table->string('muzakki');
-            $table->string('jenis_zakat');
+            $table->string('nama');
             $table->string('nominal');
             $table->string('bukti');
             $table->boolean('konfirmasi');
@@ -31,6 +30,6 @@ class Zakat extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('zakat');
+        Schema::dropIfExists('infaq');
     }
 }

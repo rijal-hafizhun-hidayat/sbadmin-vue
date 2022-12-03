@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', [\App\Http\Controllers\Login\LoginController::class, 'index'])->name('zakat.index');
+Route::get('/login', [\App\Http\Controllers\Login\LoginController::class, 'index'])->name('login.index');
 Route::get('/zakat', [\App\Http\Controllers\Zakat\ZakatController::class, 'index'])->name('zakat.index');
 Route::get('/zakat/pelaporan', [\App\Http\Controllers\Zakat\ZakatController::class, 'report'])->name('zakat.report');
 Route::get('/zakat/pengambilan', [\App\Http\Controllers\Zakat\PengambilanController::class, 'index'])->name('zakat.pengambilan');
