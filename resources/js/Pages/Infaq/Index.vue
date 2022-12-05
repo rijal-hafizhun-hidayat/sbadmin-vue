@@ -1,8 +1,8 @@
 <template>
     <div id="page-top">
         <div id="wrapper">
-            <SideBar :isActiveZakat="true" :isShowZakat="true"/>
-            <DataZakat :datas="datas"/>
+            <SideBar :isActiveInfaq="true" :isShowInfaq="true"/>
+            <DataInfaq :datas="datas"/>
         </div>
     </div>
     <ScrollToTopButton />
@@ -12,11 +12,11 @@
 import LogOut from '../Components/LogOut.vue'
 import ScrollToTopButton from '../Components/ScrollToTopButton.vue'
 import SideBar from './../Components/SideBar.vue'
-import DataZakat from './Components/DataZakat.vue'
+import DataInfaq from './Components/DataInfaq.vue'
 
 export default {
-    components: { SideBar, ScrollToTopButton, LogOut, DataZakat },
-    name: 'IndexZakat',
+    components: { SideBar, ScrollToTopButton, LogOut, DataInfaq },
+    name: 'IndexInfaq',
     props: {
         datas: Object,
     }

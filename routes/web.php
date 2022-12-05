@@ -14,9 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/login', [\App\Http\Controllers\Login\LoginController::class, 'index'])->name('login.index');
+
+//zakat
 Route::get('/zakat', [\App\Http\Controllers\Zakat\ZakatController::class, 'index'])->name('zakat.index');
 Route::get('/zakat/pelaporan', [\App\Http\Controllers\Zakat\ZakatController::class, 'report'])->name('zakat.report');
-Route::get('/zakat/pengambilan', [\App\Http\Controllers\Zakat\PengambilanController::class, 'index'])->name('zakat.pengambilan');
+Route::get('/zakat/pengambilan', [\App\Http\Controllers\Zakat\ZakatController::class, 'pengambilan'])->name('zakat.pengambilan');
+
+//infaq
+Route::get('/infaq', [\App\Http\Controllers\Infaq\InfaqController::class, 'index'])->name('infaq.index');
+Route::get('/infaq/pelaporan', [\App\Http\Controllers\Infaq\InfaqController::class, 'report'])->name('infaq.report');
+Route::get('/infaq/pengambilan', [\App\Http\Controllers\Infaq\InfaqController::class, 'pengambilan'])->name('infaq.pengambilan');
 
 // Route::get('/', function () {
 //     return view('welcome');

@@ -26,13 +26,16 @@
         </div>
 
         <!-- Nav Item - Utilities Collapse Menu -->
+
+        <!-- Nav Item - Zakat Menu -->
+
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-wrench"></i>
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesZakat"
+                aria-expanded="true" aria-controls="collapseUtilitiesZakat">
+                <i class="fas fa-money-bill"></i>
                 <span>Zakat</span>
             </a>
-            <div id="collapseUtilities" class="collapse" :class="{show: isShow}" aria-labelledby="headingUtilities"
+            <div id="collapseUtilitiesZakat" class="collapse" :class="{show: isShowZakat}" aria-labelledby="headingUtilities"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">List Tools:</h6>
@@ -40,6 +43,27 @@
                     <Link class="collapse-item" :class="{ active: isActiveZakat }" href="/zakat">Data</Link>
                     <Link class="collapse-item" :class="{ active: isActiveZakatPelaporan }" href="/zakat/pelaporan">Pelaporan</Link>
                     <Link class="collapse-item" :class="{ active: isActiveZakatPengambilan }" href="/zakat/pengambilan">Pengambilan</Link>
+                    <!-- <a class="collapse-item" href="#">Pelaporan</a> -->
+                </div>
+            </div>
+        </li>
+        
+        <!-- Nav Item - Infaw Menu -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesInfaq"
+                aria-expanded="true" aria-controls="collapseUtilitiesInfaq">
+                <i class="fas fa-money-bill"></i>
+                <span>Infaq</span>
+            </a>
+            <div id="collapseUtilitiesInfaq" class="collapse" :class="{show: isShowInfaq}" aria-labelledby="headingUtilities"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">List Tools:</h6>
+                    <!-- <a class="collapse-item" href="#">Data</a> -->
+                    <Link class="collapse-item" :class="{ active: isActiveInfaq }" href="/infaq">Data</Link>
+                    <Link class="collapse-item" :class="{ active: isActiveInfaqPelaporan }" href="/infaq/pelaporan">Pelaporan</Link>
+                    <Link class="collapse-item" :class="{ active: isActiveInfaqPengambilan }" href="/infaq/pengambilan">Pengambilan</Link>
                     <!-- <a class="collapse-item" href="#">Pelaporan</a> -->
                 </div>
             </div>
@@ -63,10 +87,18 @@ export default {
     name: 'SideBar',
     components: { Link },
     props:{
+
+        //zakat
+        isShowZakat: Boolean,
         isActiveZakatPelaporan: Boolean,
         isActiveZakat: Boolean,
-        isShow: Boolean,
-        isActiveZakatPengambilan: Boolean
+        isActiveZakatPengambilan: Boolean,
+
+        //infaq
+        isShowInfaq: Boolean,
+        isActiveInfaqPelaporan: Boolean,
+        isActiveInfaq: Boolean,
+        isActiveInfaqPengambilan: Boolean,
     },
     setup(props){
         console.log(props.isActiveZakatPelaporan)

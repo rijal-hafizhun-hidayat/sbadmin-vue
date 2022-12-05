@@ -18,5 +18,9 @@ class ZakatController extends Controller
         return Inertia::render('Zakat/Pelaporan/Index');
     }
 
+    public function pengambilan(){
+        return Inertia::render('Zakat/Pengambilan/Index');
+    }
+
     
 }

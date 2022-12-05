@@ -1,7 +1,7 @@
 <template>
     <div id="page-top">
         <div id="wrapper">
-            <SideBar :isActiveZakatPelaporan="true" :isShowZakat="true"/>
+            <SideBar :isActiveInfaqPelaporan="true" :isShowInfaq="true"/>
             <DataPelaporan/>
         </div>
     </div>
@@ -16,6 +16,6 @@ import DataPelaporan from './Components/DataPelaporan.vue'
 
 export default {
     components: { SideBar, ScrollToTopButton, LogOut, DataPelaporan },
-    name: 'PelaporanZakat',
+    name: 'PelaporanInfaq',
 }
 </script>

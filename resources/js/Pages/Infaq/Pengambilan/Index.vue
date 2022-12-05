@@ -1,7 +1,7 @@
 <template>
     <div id="page-top">
         <div id="wrapper">
-            <SideBar :isActiveZakatPengambilan="true" :isShowZakat="true"/>
+            <SideBar :isActiveInfaqPengambilan="true" :isShowInfaq="true"/>
             <DataPengambilan />
         </div>
     </div>
@@ -14,7 +14,7 @@ import LogOut from '../../Components/LogOut.vue';
 import SideBar from '../../Components/SideBar.vue';
 import DataPengambilan from './Components/DataPengambilan.vue';
 export default {
-    name: 'PengambilanZakat',
+    name: 'PengambilanInfaq',
     components: { SideBar, DataPengambilan, LogOut, ScrollToTopButton }
 }
 </script>
