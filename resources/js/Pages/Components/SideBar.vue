@@ -12,7 +12,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item ">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="#">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -48,7 +48,7 @@
             </div>
         </li>
         
-        <!-- Nav Item - Infaw Menu -->
+        <!-- Nav Item - Infaq Menu -->
 
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesInfaq"
@@ -64,6 +64,27 @@
                     <Link class="collapse-item" :class="{ active: isActiveInfaq }" href="/infaq">Data</Link>
                     <Link class="collapse-item" :class="{ active: isActiveInfaqPelaporan }" href="/infaq/pelaporan">Pelaporan</Link>
                     <Link class="collapse-item" :class="{ active: isActiveInfaqPengambilan }" href="/infaq/pengambilan">Pengambilan</Link>
+                    <!-- <a class="collapse-item" href="#">Pelaporan</a> -->
+                </div>
+            </div>
+        </li>
+
+        <!-- Nav Item - shadaqah Menu -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesShadaqah"
+                aria-expanded="true" aria-controls="collapseUtilitiesShadaqah">
+                <i class="fas fa-money-bill"></i>
+                <span>Shadaqah</span>
+            </a>
+            <div id="collapseUtilitiesShadaqah" class="collapse" :class="{show: isShowShadaqah}" aria-labelledby="headingUtilities"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">List Tools:</h6>
+                    <!-- <a class="collapse-item" href="#">Data</a> -->
+                    <Link class="collapse-item" :class="{ active: isActiveShadaqah }" href="/shadaqah">Data</Link>
+                    <Link class="collapse-item" :class="{ active: isActiveShadaqahPelaporan }" href="/shadaqah/pelaporan">Pelaporan</Link>
+                    <Link class="collapse-item" :class="{ active: isActiveShadaqahPengambilan }" href="/shadaqah/pengambilan">Pengambilan</Link>
                     <!-- <a class="collapse-item" href="#">Pelaporan</a> -->
                 </div>
             </div>
@@ -99,6 +120,12 @@ export default {
         isActiveInfaqPelaporan: Boolean,
         isActiveInfaq: Boolean,
         isActiveInfaqPengambilan: Boolean,
+
+        //shadaqah
+        isShowShadaqah: Boolean,
+        isActiveShadaqahPelaporan: Boolean,
+        isActiveShadaqah: Boolean,
+        isActiveShadaqahPengambilan: Boolean,
     },
     setup(props){
         console.log(props.isActiveZakatPelaporan)

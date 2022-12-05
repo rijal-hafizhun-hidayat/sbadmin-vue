@@ -3,19 +3,18 @@
         <div id="content">
             <NavBar />
             <div class="container-fluid">
-                <TablePengambilan />
+                <TablePelaporan />
             </div>
         </div>
         <Footer />
     </div>
 </template>
-
 <script>
 import Footer from '../../../Components/Footer.vue';
 import NavBar from '../../../Components/NavBar.vue';
-import TablePengambilan from './TablePengambilan.vue';
+import TablePelaporan from './TablePelaporan.vue';
 export default {
-    name: 'DataPengambilan',
-    components: { NavBar, TablePengambilan, Footer }
+    name: 'DataPelaporan',
+    components: { NavBar, TablePelaporan, Footer }
 }
 </script>

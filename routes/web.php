@@ -25,6 +25,11 @@ Route::get('/infaq', [\App\Http\Controllers\Infaq\InfaqController::class, 'index
 Route::get('/infaq/pelaporan', [\App\Http\Controllers\Infaq\InfaqController::class, 'report'])->name('infaq.report');
 Route::get('/infaq/pengambilan', [\App\Http\Controllers\Infaq\InfaqController::class, 'pengambilan'])->name('infaq.pengambilan');
 
+//shadaqah
+Route::get('/shadaqah', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'index'])->name('shadaqah.index');
+Route::get('/shadaqah/pelaporan', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'report'])->name('shadaqah.report');
+Route::get('/shadaqah/pengambilan', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'pengambilan'])->name('shadaqah.pengambilan');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });

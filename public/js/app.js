@@ -21639,7 +21639,12 @@ __webpack_require__.r(__webpack_exports__);
     isShowInfaq: Boolean,
     isActiveInfaqPelaporan: Boolean,
     isActiveInfaq: Boolean,
-    isActiveInfaqPengambilan: Boolean
+    isActiveInfaqPengambilan: Boolean,
+    //shadaqah
+    isShowShadaqah: Boolean,
+    isActiveShadaqahPelaporan: Boolean,
+    isActiveShadaqah: Boolean,
+    isActiveShadaqahPengambilan: Boolean
   },
   setup: function setup(props) {
     console.log(props.isActiveZakatPelaporan);
@@ -22001,6 +22006,127 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=script&lang=js":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=script&lang=js ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Components_Footer_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../Components/Footer.vue */ "./resources/js/Pages/Components/Footer.vue");
+/* harmony import */ var _Components_NavBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Components/NavBar.vue */ "./resources/js/Pages/Components/NavBar.vue");
+/* harmony import */ var _TablePelaporan_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TablePelaporan.vue */ "./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue");
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'DataPelaporan',
+  components: {
+    NavBar: _Components_NavBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    TablePelaporan: _TablePelaporan_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Footer: _Components_Footer_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=script&lang=js":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'TablePelaporan'
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=script&lang=js":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=script&lang=js ***!
+  \*************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Components_LogOut_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Components/LogOut.vue */ "./resources/js/Pages/Components/LogOut.vue");
+/* harmony import */ var _Components_ScrollToTopButton_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Components/ScrollToTopButton.vue */ "./resources/js/Pages/Components/ScrollToTopButton.vue");
+/* harmony import */ var _Components_SideBar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Components/SideBar.vue */ "./resources/js/Pages/Components/SideBar.vue");
+/* harmony import */ var _Components_DataPelaporan_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/DataPelaporan.vue */ "./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue");
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    SideBar: _Components_SideBar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    ScrollToTopButton: _Components_ScrollToTopButton_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    LogOut: _Components_LogOut_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    DataPelaporan: _Components_DataPelaporan_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  name: 'PelaporanZakat'
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=script&lang=js":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=script&lang=js ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Components_Footer_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../Components/Footer.vue */ "./resources/js/Pages/Components/Footer.vue");
+/* harmony import */ var _Components_NavBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Components/NavBar.vue */ "./resources/js/Pages/Components/NavBar.vue");
+/* harmony import */ var _TablePengambilan_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TablePengambilan.vue */ "./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue");
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'DataPengambilan',
+  components: {
+    NavBar: _Components_NavBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    TablePengambilan: _TablePengambilan_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Footer: _Components_Footer_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=script&lang=js":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=script&lang=js ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'TablePengambilan'
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Index.vue?vue&type=script&lang=js":
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Index.vue?vue&type=script&lang=js ***!
@@ -22016,7 +22142,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Components_LogOut_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Components/LogOut.vue */ "./resources/js/Pages/Components/LogOut.vue");
 /* harmony import */ var _Components_SideBar_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Components/SideBar.vue */ "./resources/js/Pages/Components/SideBar.vue");
 /* harmony import */ var _Components_DataPengambilan_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Components/DataPengambilan.vue */ "./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue");
-/* harmony import */ var _Components_DataPengambilan_vue__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Components_DataPengambilan_vue__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -22025,7 +22150,7 @@ __webpack_require__.r(__webpack_exports__);
   name: 'PengambilanShadaqah',
   components: {
     SideBar: _Components_SideBar_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    DataPengambilan: (_Components_DataPengambilan_vue__WEBPACK_IMPORTED_MODULE_3___default()),
+    DataPengambilan: _Components_DataPengambilan_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     LogOut: _Components_LogOut_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     ScrollToTopButton: _Components_ScrollToTopButton_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -22734,7 +22859,7 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "nav-item"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   "class": "nav-link",
-  href: "index.html"
+  href: "#"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "fas fa-fw fa-tachometer-alt"
 }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Dashboard")])], -1 /* HOISTED */);
@@ -22782,7 +22907,26 @@ var _hoisted_13 = {
 var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", {
   "class": "collapse-header"
 }, "List Tools:", -1 /* HOISTED */);
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
+var _hoisted_15 = {
+  "class": "nav-item"
+};
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  "class": "nav-link collapsed",
+  href: "#",
+  "data-toggle": "collapse",
+  "data-target": "#collapseUtilitiesShadaqah",
+  "aria-expanded": "true",
+  "aria-controls": "collapseUtilitiesShadaqah"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fas fa-money-bill"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "Shadaqah")], -1 /* HOISTED */);
+var _hoisted_17 = {
+  "class": "bg-white py-2 collapse-inner rounded"
+};
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", {
+  "class": "collapse-header"
+}, "List Tools:", -1 /* HOISTED */);
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
   "class": "sidebar-divider"
 }, null, -1 /* HOISTED */);
 
@@ -22825,7 +22969,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Pengambilan")];
     }),
     _: 1 /* STABLE */
-  }, 8 /* PROPS */, ["class"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a class=\"collapse-item\" href=\"#\">Pelaporan</a> ")])], 2 /* CLASS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Nav Item - Infaw Menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, 8 /* PROPS */, ["class"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a class=\"collapse-item\" href=\"#\">Pelaporan</a> ")])], 2 /* CLASS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Nav Item - Infaq Menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     id: "collapseUtilitiesInfaq",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["collapse", {
       show: $props.isShowInfaq
@@ -22862,7 +23006,44 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Pengambilan")];
     }),
     _: 1 /* STABLE */
-  }, 8 /* PROPS */, ["class"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a class=\"collapse-item\" href=\"#\">Pelaporan</a> ")])], 2 /* CLASS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Divider "), _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar Toggler (Sidebar) "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"text-center d-none d-md-inline\">\r\n            <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n        </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" End of Sidebar ")], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
+  }, 8 /* PROPS */, ["class"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a class=\"collapse-item\" href=\"#\">Pelaporan</a> ")])], 2 /* CLASS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Nav Item - shadaqah Menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    id: "collapseUtilitiesShadaqah",
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["collapse", {
+      show: $props.isShowShadaqah
+    }]),
+    "aria-labelledby": "headingUtilities",
+    "data-parent": "#accordionSidebar"
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [_hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a class=\"collapse-item\" href=\"#\">Data</a> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["collapse-item", {
+      active: $props.isActiveShadaqah
+    }]),
+    href: "/shadaqah"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Data")];
+    }),
+    _: 1 /* STABLE */
+  }, 8 /* PROPS */, ["class"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["collapse-item", {
+      active: $props.isActiveShadaqahPelaporan
+    }]),
+    href: "/shadaqah/pelaporan"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Pelaporan")];
+    }),
+    _: 1 /* STABLE */
+  }, 8 /* PROPS */, ["class"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["collapse-item", {
+      active: $props.isActiveShadaqahPengambilan
+    }]),
+    href: "/shadaqah/pengambilan"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Pengambilan")];
+    }),
+    _: 1 /* STABLE */
+  }, 8 /* PROPS */, ["class"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a class=\"collapse-item\" href=\"#\">Pelaporan</a> ")])], 2 /* CLASS */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Divider "), _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Sidebar Toggler (Sidebar) "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"text-center d-none d-md-inline\">\r\n            <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\r\n        </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" End of Sidebar ")], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */);
 }
 
 /***/ }),
@@ -23333,6 +23514,171 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     isActiveShadaqah: true,
     isShowShadaqah: true
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_DataShadaqah)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ScrollToTopButton), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LogOut)], 64 /* STABLE_FRAGMENT */);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=template&id=b89ff09a":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=template&id=b89ff09a ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  id: "content-wrapper",
+  "class": "d-flex flex-column"
+};
+var _hoisted_2 = {
+  id: "content"
+};
+var _hoisted_3 = {
+  "class": "container-fluid"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_NavBar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("NavBar");
+  var _component_TablePelaporan = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("TablePelaporan");
+  var _component_Footer = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Footer");
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavBar), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TablePelaporan)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=template&id=824ed75e":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=template&id=824ed75e ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("h1", null, "ini halaman pelaporan infaq");
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=template&id=2d22e2c2":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=template&id=2d22e2c2 ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  id: "page-top"
+};
+var _hoisted_2 = {
+  id: "wrapper"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_SideBar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("SideBar");
+  var _component_DataPelaporan = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("DataPelaporan");
+  var _component_ScrollToTopButton = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("ScrollToTopButton");
+  var _component_LogOut = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LogOut");
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SideBar, {
+    isActiveShadaqahPelaporan: true,
+    isShowShadaqah: true
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_DataPelaporan)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ScrollToTopButton), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LogOut)], 64 /* STABLE_FRAGMENT */);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=template&id=b5a7bd1a":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=template&id=b5a7bd1a ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  id: "content-wrapper",
+  "class": "d-flex flex-column"
+};
+var _hoisted_2 = {
+  id: "content"
+};
+var _hoisted_3 = {
+  "class": "container-fluid"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_NavBar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("NavBar");
+  var _component_TablePengambilan = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("TablePengambilan");
+  var _component_Footer = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Footer");
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_NavBar), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TablePengambilan)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=template&id=76722cd5":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=template&id=76722cd5 ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "card shadow mb-4"
+};
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card-header py-3"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", {
+  "class": "m-0 font-weight-bold text-primary"
+}, "Pengambilan Dana Shadaqah")], -1 /* HOISTED */);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "card-body"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "table-responsive"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", {
+  "class": "table table-bordered",
+  id: "dataTable",
+  width: "100%",
+  cellspacing: "0"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "No."), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Nominal"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Kebutuhan"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Bukti"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("th", null, "Action")])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, "1"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, "Rp 1.000.000"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, "acara maulid nabi"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, "gambar"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "text-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "#",
+  "class": "btn btn-warning btn-circle mr-2"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fas fa-edit"
+})]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "#",
+  "class": "btn btn-danger btn-circle"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "fas fa-trash"
+})])])])])])])])], -1 /* HOISTED */);
+var _hoisted_4 = [_hoisted_2, _hoisted_3];
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_4);
 }
 
 /***/ }),
@@ -48695,13 +49041,143 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DataPelaporan_vue_vue_type_template_id_b89ff09a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DataPelaporan.vue?vue&type=template&id=b89ff09a */ "./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=template&id=b89ff09a");
+/* harmony import */ var _DataPelaporan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DataPelaporan.vue?vue&type=script&lang=js */ "./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=script&lang=js");
+/* harmony import */ var E_xampp_htdocs_sbadmin_vue_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,E_xampp_htdocs_sbadmin_vue_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_DataPelaporan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_DataPelaporan_vue_vue_type_template_id_b89ff09a__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _TablePelaporan_vue_vue_type_template_id_824ed75e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TablePelaporan.vue?vue&type=template&id=824ed75e */ "./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=template&id=824ed75e");
+/* harmony import */ var _TablePelaporan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TablePelaporan.vue?vue&type=script&lang=js */ "./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=script&lang=js");
+/* harmony import */ var E_xampp_htdocs_sbadmin_vue_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,E_xampp_htdocs_sbadmin_vue_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_TablePelaporan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_TablePelaporan_vue_vue_type_template_id_824ed75e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pelaporan/Index.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pelaporan/Index.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Index_vue_vue_type_template_id_2d22e2c2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=2d22e2c2 */ "./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=template&id=2d22e2c2");
+/* harmony import */ var _Index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js */ "./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=script&lang=js");
+/* harmony import */ var E_xampp_htdocs_sbadmin_vue_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,E_xampp_htdocs_sbadmin_vue_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Index_vue_vue_type_template_id_2d22e2c2__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Shadaqah/Pelaporan/Index.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue":
 /*!********************************************************************************!*\
   !*** ./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue ***!
   \********************************************************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DataPengambilan_vue_vue_type_template_id_b5a7bd1a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DataPengambilan.vue?vue&type=template&id=b5a7bd1a */ "./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=template&id=b5a7bd1a");
+/* harmony import */ var _DataPengambilan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DataPengambilan.vue?vue&type=script&lang=js */ "./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=script&lang=js");
+/* harmony import */ var E_xampp_htdocs_sbadmin_vue_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
+
+
+;
+const __exports__ = /*#__PURE__*/(0,E_xampp_htdocs_sbadmin_vue_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_DataPengambilan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_DataPengambilan_vue_vue_type_template_id_b5a7bd1a__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _TablePengambilan_vue_vue_type_template_id_76722cd5__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TablePengambilan.vue?vue&type=template&id=76722cd5 */ "./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=template&id=76722cd5");
+/* harmony import */ var _TablePengambilan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TablePengambilan.vue?vue&type=script&lang=js */ "./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=script&lang=js");
+/* harmony import */ var E_xampp_htdocs_sbadmin_vue_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,E_xampp_htdocs_sbadmin_vue_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_TablePengambilan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_TablePengambilan_vue_vue_type_template_id_76722cd5__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
 
 /***/ }),
 
@@ -49353,6 +49829,86 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=script&lang=js":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=script&lang=js ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_DataPelaporan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_DataPelaporan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./DataPelaporan.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=script&lang=js":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TablePelaporan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TablePelaporan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TablePelaporan.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=script&lang=js":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Index_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Index.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=script&lang=js":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=script&lang=js ***!
+  \********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_DataPengambilan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_DataPengambilan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./DataPengambilan.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=script&lang=js":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TablePengambilan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TablePengambilan_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TablePengambilan.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Shadaqah/Pengambilan/Index.vue?vue&type=script&lang=js":
 /*!***********************************************************************************!*\
   !*** ./resources/js/Pages/Shadaqah/Pengambilan/Index.vue?vue&type=script&lang=js ***!
@@ -49881,6 +50437,86 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=template&id=b89ff09a":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=template&id=b89ff09a ***!
+  \**********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_DataPelaporan_vue_vue_type_template_id_b89ff09a__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_DataPelaporan_vue_vue_type_template_id_b89ff09a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./DataPelaporan.vue?vue&type=template&id=b89ff09a */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue?vue&type=template&id=b89ff09a");
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=template&id=824ed75e":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=template&id=824ed75e ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TablePelaporan_vue_vue_type_template_id_824ed75e__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TablePelaporan_vue_vue_type_template_id_824ed75e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TablePelaporan.vue?vue&type=template&id=824ed75e */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue?vue&type=template&id=824ed75e");
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=template&id=2d22e2c2":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=template&id=2d22e2c2 ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Index_vue_vue_type_template_id_2d22e2c2__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Index_vue_vue_type_template_id_2d22e2c2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Index.vue?vue&type=template&id=2d22e2c2 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pelaporan/Index.vue?vue&type=template&id=2d22e2c2");
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=template&id=b5a7bd1a":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=template&id=b5a7bd1a ***!
+  \**************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_DataPengambilan_vue_vue_type_template_id_b5a7bd1a__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_DataPengambilan_vue_vue_type_template_id_b5a7bd1a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./DataPengambilan.vue?vue&type=template&id=b5a7bd1a */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue?vue&type=template&id=b5a7bd1a");
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=template&id=76722cd5":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=template&id=76722cd5 ***!
+  \***************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TablePengambilan_vue_vue_type_template_id_76722cd5__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TablePengambilan_vue_vue_type_template_id_76722cd5__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TablePengambilan.vue?vue&type=template&id=76722cd5 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue?vue&type=template&id=76722cd5");
+
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Shadaqah/Pengambilan/Index.vue?vue&type=template&id=35ed1978":
 /*!*****************************************************************************************!*\
   !*** ./resources/js/Pages/Shadaqah/Pengambilan/Index.vue?vue&type=template&id=35ed1978 ***!
@@ -50341,8 +50977,16 @@ var map = {
 	"./Shadaqah/Components/TableShadaqah.vue": "./resources/js/Pages/Shadaqah/Components/TableShadaqah.vue",
 	"./Shadaqah/Index": "./resources/js/Pages/Shadaqah/Index.vue",
 	"./Shadaqah/Index.vue": "./resources/js/Pages/Shadaqah/Index.vue",
+	"./Shadaqah/Pelaporan/Components/DataPelaporan": "./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue",
+	"./Shadaqah/Pelaporan/Components/DataPelaporan.vue": "./resources/js/Pages/Shadaqah/Pelaporan/Components/DataPelaporan.vue",
+	"./Shadaqah/Pelaporan/Components/TablePelaporan": "./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue",
+	"./Shadaqah/Pelaporan/Components/TablePelaporan.vue": "./resources/js/Pages/Shadaqah/Pelaporan/Components/TablePelaporan.vue",
+	"./Shadaqah/Pelaporan/Index": "./resources/js/Pages/Shadaqah/Pelaporan/Index.vue",
+	"./Shadaqah/Pelaporan/Index.vue": "./resources/js/Pages/Shadaqah/Pelaporan/Index.vue",
 	"./Shadaqah/Pengambilan/Components/DataPengambilan": "./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue",
 	"./Shadaqah/Pengambilan/Components/DataPengambilan.vue": "./resources/js/Pages/Shadaqah/Pengambilan/Components/DataPengambilan.vue",
+	"./Shadaqah/Pengambilan/Components/TablePengambilan": "./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue",
+	"./Shadaqah/Pengambilan/Components/TablePengambilan.vue": "./resources/js/Pages/Shadaqah/Pengambilan/Components/TablePengambilan.vue",
 	"./Shadaqah/Pengambilan/Index": "./resources/js/Pages/Shadaqah/Pengambilan/Index.vue",
 	"./Shadaqah/Pengambilan/Index.vue": "./resources/js/Pages/Shadaqah/Pengambilan/Index.vue",
 	"./Zakat/Components/DataZakat": "./resources/js/Pages/Zakat/Components/DataZakat.vue",
