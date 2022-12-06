@@ -1,7 +1,7 @@
 <template>
     <div id="page-top">
         <div id="wrapper">
-            <SideBar />
+            <SideBar :isShowDashboard="true"/>
             <Content />
         </div>
     </div>

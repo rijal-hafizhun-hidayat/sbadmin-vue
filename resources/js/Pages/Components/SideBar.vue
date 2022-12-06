@@ -11,10 +11,11 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item ">
-            <a class="nav-link" href="#">
+        <li class="nav-item" :class="{active: isShowDashboard}">
+            <Link class="nav-link" href="/dashboard">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
+                <span>Dashboard</span>
+            </Link>
         </li>
 
         <!-- Divider -->
@@ -29,7 +30,7 @@
 
         <!-- Nav Item - Zakat Menu -->
 
-        <li class="nav-item">
+        <li class="nav-item" :class="{active: isShowZakat}">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesZakat"
                 aria-expanded="true" aria-controls="collapseUtilitiesZakat">
                 <i class="fas fa-money-bill"></i>
@@ -50,7 +51,7 @@
         
         <!-- Nav Item - Infaq Menu -->
 
-        <li class="nav-item">
+        <li class="nav-item" :class="{active: isShowInfaq}">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesInfaq"
                 aria-expanded="true" aria-controls="collapseUtilitiesInfaq">
                 <i class="fas fa-money-bill"></i>
@@ -71,7 +72,7 @@
 
         <!-- Nav Item - shadaqah Menu -->
 
-        <li class="nav-item">
+        <li class="nav-item" :class="{active: isShowShadaqah}">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesShadaqah"
                 aria-expanded="true" aria-controls="collapseUtilitiesShadaqah">
                 <i class="fas fa-money-bill"></i>
@@ -85,6 +86,25 @@
                     <Link class="collapse-item" :class="{ active: isActiveShadaqah }" href="/shadaqah">Data</Link>
                     <Link class="collapse-item" :class="{ active: isActiveShadaqahPelaporan }" href="/shadaqah/pelaporan">Pelaporan</Link>
                     <Link class="collapse-item" :class="{ active: isActiveShadaqahPengambilan }" href="/shadaqah/pengambilan">Pengambilan</Link>
+                    <!-- <a class="collapse-item" href="#">Pelaporan</a> -->
+                </div>
+            </div>
+        </li>
+
+        <!-- Nav Item - akun Menu -->
+
+        <li class="nav-item" :class="{active: isShowAkun}">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitiesAkun"
+                aria-expanded="true" aria-controls="collapseUtilitiesAkun">
+                <i class="fas fa-user"></i>
+                <span>Akun</span>
+            </a>
+            <div id="collapseUtilitiesAkun" class="collapse" :class="{show: isShowAkun}" aria-labelledby="headingUtilities"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">List Tools:</h6>
+                    <!-- <a class="collapse-item" href="#">Data</a> -->
+                    <Link class="collapse-item" :class="{ active: isActiveAkun }" href="/akun">Akun</Link>
                     <!-- <a class="collapse-item" href="#">Pelaporan</a> -->
                 </div>
             </div>
@@ -109,6 +129,9 @@ export default {
     components: { Link },
     props:{
 
+        //dashboard
+        isShowDashboard: Boolean,
+
         //zakat
         isShowZakat: Boolean,
         isActiveZakatPelaporan: Boolean,
@@ -126,6 +149,10 @@ export default {
         isActiveShadaqahPelaporan: Boolean,
         isActiveShadaqah: Boolean,
         isActiveShadaqahPengambilan: Boolean,
+
+        //akun
+        isShowAkun: Boolean,
+        isActiveAkun: Boolean,
     },
     setup(props){
         console.log(props.isActiveZakatPelaporan)

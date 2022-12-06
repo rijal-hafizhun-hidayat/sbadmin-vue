@@ -30,6 +30,12 @@ Route::get('/shadaqah', [\App\Http\Controllers\Shadaqah\ShadaqahController::clas
 Route::get('/shadaqah/pelaporan', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'report'])->name('shadaqah.report');
 Route::get('/shadaqah/pengambilan', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'pengambilan'])->name('shadaqah.pengambilan');
 
+//shadaqah
+Route::get('/akun', [\App\Http\Controllers\Akun\AkunController::class, 'index'])->name('akun.index');
+
+//dashboard
+Route::get('/dashboard', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });

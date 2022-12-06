@@ -42,6 +42,7 @@
     </nav>
 <!-- End of Topbar -->
 </template>
+
 <script>
 export default {
     name: 'NavBar',
