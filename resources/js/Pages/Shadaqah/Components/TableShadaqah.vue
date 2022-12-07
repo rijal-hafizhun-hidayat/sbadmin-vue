@@ -13,7 +13,6 @@
                             <th>Nama Muzakki</th>
                             <th>Gender</th>
                             <th>No Tlp</th>
-                            <th>Jenis Zakat</th>
                             <th>Harta</th>
                             <th>Nominal</th>
                             <th>Action</th>
@@ -25,7 +24,6 @@
                             <td>Rijal Hafizhun Hidayat</td>
                             <td>Laki-laki</td>
                             <td>081393784144</td>
-                            <td>Zakat Mal</td>
                             <td>Emas</td>
                             <td>Rp. 1.000.000</td>
                             <td>

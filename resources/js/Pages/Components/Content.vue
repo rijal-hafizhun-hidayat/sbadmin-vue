@@ -22,12 +22,6 @@
                 </div>
 
                 <!-- Content Row -->
-
-                <div class="row">
-                    <Chart />
-                </div>
-
-                <!-- Content Row -->
                 <div class="row">
 
                 </div>
