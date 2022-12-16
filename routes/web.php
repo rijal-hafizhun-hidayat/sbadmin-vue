@@ -13,28 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', [\App\Http\Controllers\Login\LoginController::class, 'index'])->name('login.index');
+//autentikasi
+Route::get('/auth', [\App\Http\Controllers\Login\LoginController::class, 'index'])->name('auth.index');
+Route::post('/login', [\App\Http\Controllers\Login\LoginController::class, 'auth'])->name('auth.post');
 
-//zakat
-Route::get('/zakat', [\App\Http\Controllers\Zakat\ZakatController::class, 'index'])->name('zakat.index');
-Route::get('/zakat/pelaporan', [\App\Http\Controllers\Zakat\ZakatController::class, 'report'])->name('zakat.report');
-Route::get('/zakat/pengambilan', [\App\Http\Controllers\Zakat\ZakatController::class, 'pengambilan'])->name('zakat.pengambilan');
+Route::middleware(['AuthIsValid'])->group(function () {
+    //zakat
+    Route::get('/zakat', [\App\Http\Controllers\Zakat\ZakatController::class, 'index'])->name('zakat.index');
+    Route::get('/zakat/pelaporan', [\App\Http\Controllers\Zakat\ZakatController::class, 'report'])->name('zakat.report');
+    Route::get('/zakat/pengambilan', [\App\Http\Controllers\Zakat\ZakatController::class, 'pengambilan'])->name('zakat.pengambilan');
 
-//infaq
-Route::get('/infaq', [\App\Http\Controllers\Infaq\InfaqController::class, 'index'])->name('infaq.index');
-Route::get('/infaq/pelaporan', [\App\Http\Controllers\Infaq\InfaqController::class, 'report'])->name('infaq.report');
-Route::get('/infaq/pengambilan', [\App\Http\Controllers\Infaq\InfaqController::class, 'pengambilan'])->name('infaq.pengambilan');
+    //infaq
+    Route::get('/infaq', [\App\Http\Controllers\Infaq\InfaqController::class, 'index'])->name('infaq.index');
+    Route::get('/infaq/pelaporan', [\App\Http\Controllers\Infaq\InfaqController::class, 'report'])->name('infaq.report');
+    Route::get('/infaq/pengambilan', [\App\Http\Controllers\Infaq\InfaqController::class, 'pengambilan'])->name('infaq.pengambilan');
 
-//shadaqah
-Route::get('/shadaqah', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'index'])->name('shadaqah.index');
-Route::get('/shadaqah/pelaporan', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'report'])->name('shadaqah.report');
-Route::get('/shadaqah/pengambilan', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'pengambilan'])->name('shadaqah.pengambilan');
+    //shadaqah
+    Route::get('/shadaqah', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'index'])->name('shadaqah.index');
+    Route::get('/shadaqah/pelaporan', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'report'])->name('shadaqah.report');
+    Route::get('/shadaqah/pengambilan', [\App\Http\Controllers\Shadaqah\ShadaqahController::class, 'pengambilan'])->name('shadaqah.pengambilan');
 
-//shadaqah
-Route::get('/akun', [\App\Http\Controllers\Akun\AkunController::class, 'index'])->name('akun.index');
+    //shadaqah
+    Route::get('/akun', [\App\Http\Controllers\Akun\AkunController::class, 'index'])->name('akun.index');
 
-//dashboard
-Route::get('/dashboard', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');
+    //dashboard
+    Route::get('/dashboard', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');
+});
 
 // Route::get('/', function () {
 //     return view('welcome');

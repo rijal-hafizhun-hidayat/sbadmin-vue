@@ -15,3 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]).vue({ version: 3 });
+
+    //disable notif when npm run watch
+    mix.disableSuccessNotifications();
