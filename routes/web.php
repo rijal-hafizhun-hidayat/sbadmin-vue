@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 //autentikasi
-Route::get('/auth', [\App\Http\Controllers\Login\LoginController::class, 'index'])->name('auth.index');
-Route::post('/login', [\App\Http\Controllers\Login\LoginController::class, 'auth'])->name('auth.post');
+Route::get('/auth', [\App\Http\Controllers\Autentikasi\AuthController::class, 'index'])->name('auth.index');
+Route::post('/login', [\App\Http\Controllers\Autentikasi\AuthController::class, 'auth'])->name('auth.post');
+Route::post('/logout', [\App\Http\Controllers\Autentikasi\AuthController::class, 'logOut'])->name('auth.logout');
 
 Route::middleware(['AuthIsValid'])->group(function () {
     //zakat

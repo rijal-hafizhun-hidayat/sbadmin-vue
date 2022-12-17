@@ -8,7 +8,11 @@ use Inertia\Inertia;
 
 class DashboardController extends Controller
 {
-    public function index(){
-        return Inertia::render('Dashboard/Index');
+    public function index()
+    {
+        //dd(session('name'));
+        return Inertia::render('Dashboard/Index', [
+            'nameAkun' => session(('name'))
+        ]);
     }
 }

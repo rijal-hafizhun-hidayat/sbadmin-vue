@@ -17,7 +17,7 @@ class AuthIsValid
      */
     public function handle(Request $request, Closure $next)
     {
-        if (is_null($request->session()->get('key'))) {
+        if (is_null($request->session()->get('hasLoggedIn'))) {
             return redirect()->route('auth.index');
         }
 

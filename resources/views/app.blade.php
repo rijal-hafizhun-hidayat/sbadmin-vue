@@ -25,7 +25,7 @@
         <script src="{{ asset('admin/js/demo/chart-pie-demo.js') }}" defer></script>
         @inertiaHead
     </head>
-    <body>
+    <body class="bg-gradient-primary">
         @inertia
     </body>
 </html>

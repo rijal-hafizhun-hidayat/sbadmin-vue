@@ -5,7 +5,7 @@
         <!-- Main Content -->
         <div id="content">
 
-            <NavBar />
+            <NavBar :name="name"/>
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
@@ -41,9 +41,18 @@ import NavBar from './NavBar.vue'
 import Card from './Card.vue'
 import Chart from './Chart.vue'
 import Footer from './Footer.vue'
+import { onMounted } from '@vue/runtime-core'
 
 export default {
     components: { NavBar, Card, Chart, Footer },
-    name: 'Content'
+    name: 'Content',
+    props: {
+        name: Array
+    },
+    // setup(props){
+    //     onMounted(() => {
+    //         console.log(props.name)
+    //     })
+    // }
 }
 </script>
