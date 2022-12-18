@@ -26,6 +26,7 @@
         @inertiaHead
     </head>
     <body class="bg-gradient-primary">
+        @include('sweetalert::alert')
         @inertia
     </body>
 </html>

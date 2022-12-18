@@ -2,7 +2,7 @@
     <div id="page-top">
         <div id="wrapper">
             <SideBar :isActiveAkun="true" :isShowAkun="true"/>
-            <DataAkun :akuns="akuns" :nameAkun="nameAkun"/>
+            <CreateAkun :nameAkun="nameAkun"/>
         </div>
     </div>
     <ScrollToTopButton />
@@ -13,19 +13,17 @@ import { onMounted } from '@vue/runtime-core'
 import LogOut from '../Components/LogOut.vue'
 import ScrollToTopButton from '../Components/ScrollToTopButton.vue'
 import SideBar from './../Components/SideBar.vue'
-import DataAkun from './Components/DataAkun.vue'
-
+import CreateAkun from './Components/CreateAkun.vue'
 export default {
-    components: { SideBar, ScrollToTopButton, LogOut, DataAkun, DataAkun },
-    name: 'IndexAkun',
+    name: 'Create',
+    components: { SideBar, ScrollToTopButton, LogOut, CreateAkun },
     props: {
-        akuns: Array,
         nameAkun: Array
     },
-    // setup(props){
-    //     onMounted(() => {
-    //         console.log(props.nameAkun)
-    //     })
-    // }
+    setup(props){
+        onMounted(() => {
+            console.log(props.nameAkun)
+        })
+    }
 }
 </script>

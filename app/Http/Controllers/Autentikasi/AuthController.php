@@ -44,6 +44,7 @@ class AuthController extends Controller
         return back()->withErrors([
             'warn' => true,
         ]);
+        //return back()->withSuccess('Task Created Successfully!');
     }
 
     public function logOut(Request $request)
