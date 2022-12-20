@@ -9,11 +9,12 @@
     <LogOut />
 </template>
 <script>
-import { onMounted } from '@vue/runtime-core'
+import { computed, onMounted } from '@vue/runtime-core'
 import LogOut from '../Components/LogOut.vue'
 import ScrollToTopButton from '../Components/ScrollToTopButton.vue'
 import SideBar from './../Components/SideBar.vue'
 import DataAkun from './Components/DataAkun.vue'
+import { usePage } from '@inertiajs/inertia-vue3'
 
 export default {
     components: { SideBar, ScrollToTopButton, LogOut, DataAkun, DataAkun },
@@ -22,10 +23,13 @@ export default {
         akuns: Array,
         nameAkun: Array
     },
-    // setup(props){
-    //     onMounted(() => {
-    //         console.log(props.nameAkun)
-    //     })
-    // }
+    setup(){
+        const message = computed(() => usePage().props.value.flash.message)
+
+        //console.log(message)
+        return {
+            message
+        }
+    }
 }
 </script>

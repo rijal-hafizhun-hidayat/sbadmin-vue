@@ -16,5 +16,6 @@ class Akun extends Model
         'username',
         'email',
         'password',
+        'role'
     ];
 }

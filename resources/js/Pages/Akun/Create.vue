@@ -2,7 +2,7 @@
     <div id="page-top">
         <div id="wrapper">
             <SideBar :isActiveAkun="true" :isShowAkun="true"/>
-            <CreateAkun :nameAkun="nameAkun"/>
+            <CreateAkun :nameAkun="nameAkun" :errors="errors"/>
         </div>
     </div>
     <ScrollToTopButton />
@@ -18,6 +18,7 @@ export default {
     name: 'Create',
     components: { SideBar, ScrollToTopButton, LogOut, CreateAkun },
     props: {
+        errors: Object,
         nameAkun: Array
     },
     setup(props){

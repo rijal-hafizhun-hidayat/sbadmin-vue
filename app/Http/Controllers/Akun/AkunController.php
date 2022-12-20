@@ -33,21 +33,28 @@ class AkunController extends Controller
             [
                 'name' => 'required',
                 'username' => 'required',
-                'password' => 'required'
+                'password' => 'required',
+                'role' => 'required'
             ],
             [
                 'name.required' => 'name wajib di isi',
                 'username.required' => 'username wajib di isi',
-                'password.required' => 'password wajib di isi'
+                'password.required' => 'password wajib di isi',
+                'role.required' => 'role wajib di isi'
             ]
         );
 
         $credentials['password'] = Hash::make($credentials['password']);
-        dd(Akun::create($credentials));
+
+        Akun::create($credentials);
+
+        return redirect()->route('akun.index')->with('message', 'berhasil input data');
     }
 
     public function destroy($id)
     {
-        return dd(Akun::destroy($id));
+        Akun::destroy($id);
+
+        return redirect()->route('akun.index')->with('message', 'berhasil hapus data');
     }
 }
