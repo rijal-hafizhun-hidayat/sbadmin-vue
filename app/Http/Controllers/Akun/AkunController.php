@@ -45,4 +45,9 @@ class AkunController extends Controller
         $credentials['password'] = Hash::make($credentials['password']);
         dd(Akun::create($credentials));
     }
+
+    public function destroy($id)
+    {
+        return dd(Akun::destroy($id));
+    }
 }

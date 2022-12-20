@@ -1,6 +1,6 @@
 <template>
-    <!-- DataTales Example -->
-    <div class="card shadow mb-4">
+   <!-- DataTales Example -->
+   <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Data Akun</h6>
         </div>
@@ -26,12 +26,18 @@
                             <td>{{ akun.username }}</td>
                             <td>
                                 <div class="text-center">
-                                    <a href="#" class="btn btn-warning btn-circle mr-2">
+                                    <!-- <a href="#" class="btn btn-warning btn-circle mr-2">
                                         <i class="fas fa-edit"></i>
-                                    </a>
-                                    <a href="#" class="btn btn-danger btn-circle">
+                                    </a> -->
+                                    <Link href="#" class="btn btn-warning btn-circle mr-2">
+                                        <i class="fas fa-edit"></i>
+                                    </Link>
+                                    <!-- <a href="#" class="btn btn-danger btn-circle">
                                         <i class="fas fa-trash"></i>
-                                    </a>
+                                    </a> -->
+                                    <button @click.prevent="deleteAkun(akun.id)" class="btn btn-danger btn-circle">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
                                 </div>
                             </td>
                         </tr>
@@ -44,6 +50,7 @@
 
 <script>
 import { onMounted } from '@vue/runtime-core'
+import { Inertia } from '@inertiajs/inertia';
 import { Link } from '@inertiajs/inertia-vue3'
 export default {
     name: 'TableAkun',
@@ -51,10 +58,15 @@ export default {
     props: {
         akuns: Array
     },
-    // setup(props){
-    //     onMounted(() => {
-    //         console.log(props.akuns)
-    //     })
-    // }
+    setup(){
+        function deleteAkun(id){
+            //console.log(id)
+            Inertia.delete(`/akun/${id}`)
+        }
+
+        return {
+            deleteAkun
+        }
+    }
 }
 </script>

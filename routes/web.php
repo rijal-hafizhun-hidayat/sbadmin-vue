@@ -38,6 +38,7 @@ Route::middleware(['AuthIsValid'])->group(function () {
     Route::get('/akun', [\App\Http\Controllers\Akun\AkunController::class, 'index'])->name('akun.index');
     Route::get('/akun/create', [\App\Http\Controllers\Akun\AkunController::class, 'create'])->name('akun.create');
     Route::post('/akun/simpan', [\App\Http\Controllers\Akun\AkunController::class, 'store'])->name('akun.store');
+    Route::delete('/akun/{id}', [\App\Http\Controllers\Akun\AkunController::class, 'destroy'])->name('akun.destroy');
 
     //dashboard
     Route::get('/dashboard', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');
