@@ -2,28 +2,30 @@
     <div id="page-top">
         <div id="wrapper">
             <SideBar :isActiveAkun="true" :isShowAkun="true"/>
-            <CreateAkun :nameAkun="nameAkun" :errors="errors"/>
+            <ShowAkun :akuns="akuns" :nameAkun="nameAkun"/>
         </div>
     </div>
     <ScrollToTopButton />
     <LogOut />
 </template>
 <script>
-import { onMounted } from '@vue/runtime-core'
+import { computed, onMounted } from '@vue/runtime-core'
 import LogOut from '../Components/LogOut.vue'
 import ScrollToTopButton from '../Components/ScrollToTopButton.vue'
 import SideBar from './../Components/SideBar.vue'
-import CreateAkun from './Components/CreateAkun.vue'
+import ShowAkun from './Components/ShowAkun.vue'
+import { usePage } from '@inertiajs/inertia-vue3'
+
 export default {
-    name: 'CreateAkun',
-    components: { SideBar, ScrollToTopButton, LogOut, CreateAkun },
+    components: { SideBar, ScrollToTopButton, LogOut, ShowAkun },
+    name: 'Show',
     props: {
-        errors: Object,
+        akuns: Object,
         nameAkun: Array
     },
     // setup(props){
     //     onMounted(() => {
-    //         console.log(props.nameAkun)
+    //         console.log(props.akuns)
     //     })
     // }
 }

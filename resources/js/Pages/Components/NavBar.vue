@@ -57,10 +57,10 @@ export default {
     props: {
         name: Array // <- nama props yang dibuat di controller saat parsing data
     },
-    setup(props){
-        onMounted(() =>{
-            console.log(props.name)
-        })
-    }
+    // setup(props){
+    //     onMounted(() =>{
+    //         console.log(props.name)
+    //     })
+    // }
 }
 </script>

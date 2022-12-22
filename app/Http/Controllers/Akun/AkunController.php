@@ -27,6 +27,15 @@ class AkunController extends Controller
         ]);
     }
 
+    public function show($id)
+    {
+        //dd(Akun::find($id));
+        return Inertia::render('Akun/Show', [
+            'akuns' => Akun::find($id),
+            'nameAkun' => session(('name'))
+        ]);
+    }
+
     public function store(Request $request)
     {
         $credentials = $request->validate(

@@ -22,10 +22,10 @@ export default {
         akuns: Array,
         nameAkun: Array
     },
-    setup(props){
-        onMounted(() => {
-            console.log(props.nameAkun)
-        })
-    }
+    // setup(props){
+    //     onMounted(() => {
+    //         console.log(props.nameAkun)
+    //     })
+    // }
 }
 </script>
