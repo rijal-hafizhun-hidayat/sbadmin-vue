@@ -23,6 +23,7 @@
         "@inertiajs/progress": "^0.2.7",
         "startbootstrap-sb-admin-2": "^4.1.4",
         "sweetalert": "^2.1.2",
+        "sweetalert2": "^11.6.16",
         "vue": "^3.2.36"
     }
 }

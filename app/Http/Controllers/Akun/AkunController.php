@@ -16,29 +16,75 @@ class AkunController extends Controller
         //dd($akun);
         return Inertia::render('Akun/Index', [
             'akuns' => $akun,
-            'nameAkun' => session(('name'))
+            'nameAkun' => session(('name')),
+            'page' => 'IndexAkun'
         ]);
     }
 
     public function create()
     {
-        return Inertia::render('Akun/Create', [
-            'nameAkun' => session(('name'))
+        return Inertia::render('Akun/Index', [
+            'nameAkun' => session(('name')),
+            'page' => 'CreateAkun'
         ]);
     }
 
     public function show($id)
     {
         //dd(Akun::find($id));
-        return Inertia::render('Akun/Show', [
+        return Inertia::render('Akun/Index', [
             'akuns' => Akun::find($id),
-            'nameAkun' => session(('name'))
+            'nameAkun' => session(('name')),
+            'page' => 'ShowAkun'
         ]);
     }
 
     public function store(Request $request)
     {
-        $credentials = $request->validate(
+        // $credentials = $request->validate(
+        //     [
+        //         'name' => 'required',
+        //         'username' => 'required',
+        //         'password' => 'required',
+        //         'role' => 'required'
+        //     ],
+        //     [
+        //         'name.required' => 'name wajib di isi',
+        //         'username.required' => 'username wajib di isi',
+        //         'password.required' => 'password wajib di isi',
+        //         'role.required' => 'role wajib di isi'
+        //     ]
+        // );
+
+        // $credentials['password'] = Hash::make($credentials['password']);
+
+        $value = $this->getForm();
+
+        Akun::create($value);
+
+        return redirect()->route('akun.index')->with('message', 'berhasil input data');
+    }
+
+    public function destroy($id)
+    {
+        Akun::destroy($id);
+
+        return redirect()->route('akun.index')->with('message', 'berhasil hapus data');
+    }
+
+    public function update($id)
+    {
+        //dd($id);
+        $val = $this->getFormShow();
+        //dd($val);
+        Akun::where('id', $id)->update($val);
+
+        return redirect()->route('akun.index')->with('message', 'berhasil update data');
+    }
+
+    public function getForm()
+    {
+        $credentials = request()->validate(
             [
                 'name' => 'required',
                 'username' => 'required',
@@ -55,15 +101,31 @@ class AkunController extends Controller
 
         $credentials['password'] = Hash::make($credentials['password']);
 
-        Akun::create($credentials);
-
-        return redirect()->route('akun.index')->with('message', 'berhasil input data');
+        return $credentials;
     }
 
-    public function destroy($id)
+    public function getFormShow()
     {
-        Akun::destroy($id);
+        $credentials = request()->validate(
+            [
+                'name' => 'required',
+                'username' => 'required',
+                'role' => 'required'
+            ],
+            [
+                'name.required' => 'name wajib di isi',
+                'username.required' => 'username wajib di isi',
+                'role.required' => 'role wajib di isi'
+            ]
+        );
 
-        return redirect()->route('akun.index')->with('message', 'berhasil hapus data');
+        if (request()->filled('password')) {
+            $credentials['password'] = Hash::make(request()->input('password'));
+            //return true;
+        }
+
+        //$credentials['password'] = Hash::make($credentials['password']);
+
+        return $credentials;
     }
 }

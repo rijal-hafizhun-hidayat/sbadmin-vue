@@ -52,40 +52,50 @@
 </template>
 
 <script>
-import { computed, onMounted, ref } from '@vue/runtime-core'
+import { computed, onMounted, onUpdated, ref } from '@vue/runtime-core'
 import { Inertia } from '@inertiajs/inertia';
 import { Link } from '@inertiajs/inertia-vue3'
+import Swal from 'sweetalert2'
 
 export default {
     name: 'TableAkun',
     components: { Link },
     props: {
-        akuns: Array
+        akuns: Array,
+        flash: String
     },
-    setup(){
-        // onMounted(() => {
-        //     //document.getElementById("dataTable").DataTable();
-        // })
+    setup(props){
         const find = ref('');
+
+        onMounted(() => {
+            if(props.flash){
+                return Swal.fire({
+                    icon: 'success',
+                    title: 'berhasil',
+                    text: props.flash
+                })
+            }
+        })
+
+        //when props updated
+        onUpdated(() => {
+            if(props.flash){
+                return Swal.fire({
+                    icon: 'success',
+                    title: 'berhasil',
+                    text: props.flash
+                })
+            }
+        })
 
         function deleteAkun(id){
             //console.log(id)
             Inertia.delete(`/akun/${id}`)
         }
 
-        const search = computed(() => {
-            // return find.value.filter((fin) => {
-            //     return (
-            //         console.log(fin)
-            //     )
-            // })
-            return console.log(find.value)
-        })
-
         return {
             find,
             deleteAkun,
-            search
         }
     }
 }

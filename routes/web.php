@@ -40,6 +40,7 @@ Route::middleware(['AuthIsValid'])->group(function () {
     Route::get('/akun/show/{id}', [\App\Http\Controllers\Akun\AkunController::class, 'show'])->name('akun.show');
     Route::post('/akun/simpan', [\App\Http\Controllers\Akun\AkunController::class, 'store'])->name('akun.store');
     Route::delete('/akun/{id}', [\App\Http\Controllers\Akun\AkunController::class, 'destroy'])->name('akun.destroy');
+    Route::put('/akun/{id}', [\App\Http\Controllers\Akun\AkunController::class, 'update'])->name('akun.update');
 
     //dashboard
     Route::get('/dashboard', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');

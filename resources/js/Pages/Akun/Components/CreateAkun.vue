@@ -47,6 +47,7 @@
 import NavBar from '../../Components/NavBar.vue'
 import Footer from '../../Components/Footer.vue'
 import { Inertia } from '@inertiajs/inertia';
+import Swal from 'sweetalert2'
 import { onMounted, reactive } from '@vue/runtime-core'
 
 export default {
@@ -70,12 +71,20 @@ export default {
         }
 
         function store(){
-            return Inertia.post('/akun/simpan',{
+            const save = Inertia.post('/akun/simpan',{
                 name: akunAdd.name,
                 username: akunAdd.username,
                 password: akunAdd.password,
                 role: akunAdd.role  
             });
+
+            console.log(save)
+            
+            // return Swal.fire({
+            //     icon: 'success',
+            //     title: 'berhasil',
+            //     text: 'berhasil input data'
+            // })
             //return console.log(akunAdd)
         }
 
