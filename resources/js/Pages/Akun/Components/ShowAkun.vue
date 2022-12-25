@@ -64,14 +64,6 @@ export default {
             role: props.akuns.role
         });
 
-        // onMounted(() => {
-        //     console.log(akunAdd)
-        // })
-
-        // function setPass(){
-        //     return data.password = data.username + Math.ceil(Math.random()*10000) + '@admin'
-        // }
-
         function update(){
             return Inertia.put(`/akun/${props.akuns.id}`,{
                 name: data.name,
@@ -79,7 +71,6 @@ export default {
                 password: data.password,
                 role: data.role  
             });
-            //return console.log(akunAdd)
         }
 
         return {

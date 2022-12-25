@@ -79,13 +79,6 @@ export default {
             });
 
             console.log(save)
-            
-            // return Swal.fire({
-            //     icon: 'success',
-            //     title: 'berhasil',
-            //     text: 'berhasil input data'
-            // })
-            //return console.log(akunAdd)
         }
 
         return {

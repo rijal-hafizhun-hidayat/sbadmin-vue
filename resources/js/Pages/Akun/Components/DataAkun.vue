@@ -24,16 +24,5 @@ export default {
         nameAkun: Array,
         flash: String
     },
-    // setup(props){
-    //     onBeforeMount(() => {
-    //         if(props.flash){
-    //             return Swal.fire({
-    //                 icon: 'success',
-    //                 title: 'success',
-    //                 text: props.flash
-    //             })
-    //         }
-    //     })
-    // }
 }
 </script>

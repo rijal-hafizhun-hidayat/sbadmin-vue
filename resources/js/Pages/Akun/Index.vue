@@ -43,8 +43,7 @@ export default {
         onMounted(() => {
             console.log(props.flash)
         })
-
-        //console.log(message)
+        
         return {
             message
         }
