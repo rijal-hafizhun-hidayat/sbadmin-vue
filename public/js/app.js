@@ -21498,15 +21498,7 @@ __webpack_require__.r(__webpack_exports__);
         role: akunAdd.role
       });
       console.log(save);
-
-      // return Swal.fire({
-      //     icon: 'success',
-      //     title: 'berhasil',
-      //     text: 'berhasil input data'
-      // })
-      //return console.log(akunAdd)
     }
-
     return {
       akunAdd: akunAdd,
       setPass: setPass,
@@ -21547,17 +21539,6 @@ __webpack_require__.r(__webpack_exports__);
     nameAkun: Array,
     flash: String
   }
-  // setup(props){
-  //     onBeforeMount(() => {
-  //         if(props.flash){
-  //             return Swal.fire({
-  //                 icon: 'success',
-  //                 title: 'success',
-  //                 text: props.flash
-  //             })
-  //         }
-  //     })
-  // }
 });
 
 /***/ }),
@@ -21599,15 +21580,6 @@ __webpack_require__.r(__webpack_exports__);
       password: '',
       role: props.akuns.role
     });
-
-    // onMounted(() => {
-    //     console.log(akunAdd)
-    // })
-
-    // function setPass(){
-    //     return data.password = data.username + Math.ceil(Math.random()*10000) + '@admin'
-    // }
-
     function update() {
       return _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.put("/akun/".concat(props.akuns.id), {
         name: data.name,
@@ -21615,9 +21587,7 @@ __webpack_require__.r(__webpack_exports__);
         password: data.password,
         role: data.role
       });
-      //return console.log(akunAdd)
     }
-
     return {
       data: data,
       update: update
@@ -21658,7 +21628,7 @@ __webpack_require__.r(__webpack_exports__);
     flash: String
   },
   setup: function setup(props) {
-    var find = (0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_3__.ref)('');
+    var searchQuery = (0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_3__.ref)('');
     (0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_4__.onMounted)(function () {
       if (props.flash) {
         return sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
@@ -21679,11 +21649,17 @@ __webpack_require__.r(__webpack_exports__);
         });
       }
     });
+    var find = (0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_4__.computed)(function () {
+      return props.akuns.filter(function (akun) {
+        return akun.name.toLowerCase().indexOf(searchQuery.value.toLowerCase()) != -1;
+      });
+    });
     function deleteAkun(id) {
       //console.log(id)
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia["delete"]("/akun/".concat(id));
     }
     return {
+      searchQuery: searchQuery,
       find: find,
       deleteAkun: deleteAkun
     };
@@ -21743,8 +21719,6 @@ __webpack_require__.r(__webpack_exports__);
     (0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_7__.onMounted)(function () {
       console.log(props.flash);
     });
-
-    //console.log(message)
     return {
       message: message
     };
@@ -23173,10 +23147,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Cari...",
     "class": "ml-auto search",
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-      return $setup.find = $event;
+      return $setup.searchQuery = $event;
     }),
-    id: "search"
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.find]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.akuns, function (akun, index) {
+    id: "search",
+    autocomplete: "off"
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.searchQuery]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.find, function (akun, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
       key: akun.id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(index + 1), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(akun.name), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(akun.username), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <a href=\"#\" class=\"btn btn-warning btn-circle mr-2\">\r\n                                        <i class=\"fas fa-edit\"></i>\r\n                                    </a> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {

@@ -10,7 +10,7 @@
                     <i class="fas fa-plus fa-sm text-white-50"></i>
                     Tambah
                 </Link>
-                <input type="text" placeholder="Cari..." class="ml-auto search" v-model="find" id="search">
+                <input type="text" placeholder="Cari..." class="ml-auto search" v-model="searchQuery" id="search" autocomplete="off">
             </div>
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -23,7 +23,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="( akun, index ) in akuns" :key="akun.id">
+                        <tr v-for="( akun, index ) in find" :key="akun.id">
                             <td>{{ index + 1 }}</td>
                             <td>{{ akun.name }}</td>
                             <td>{{ akun.username }}</td>
@@ -65,7 +65,8 @@ export default {
         flash: String
     },
     setup(props){
-        const find = ref('');
+
+        const searchQuery = ref('')
 
         onMounted(() => {
             if(props.flash){
@@ -88,12 +89,19 @@ export default {
             }
         })
 
+        const find = computed(() => {
+            return props.akuns.filter((akun) => {
+                return akun.name.toLowerCase().indexOf(searchQuery.value.toLowerCase()) != -1
+            })
+        })
+
         function deleteAkun(id){
             //console.log(id)
             Inertia.delete(`/akun/${id}`)
         }
 
         return {
+            searchQuery,
             find,
             deleteAkun,
         }
