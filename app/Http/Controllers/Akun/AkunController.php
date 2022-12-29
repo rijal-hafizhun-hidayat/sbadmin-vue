@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Akun;
 use Illuminate\Support\Facades\Hash;
+use Maatwebsite\Excel\Facades\Excel;
+
+use App\Exports\UsersExport;
 
 class AkunController extends Controller
 {
@@ -124,8 +127,13 @@ class AkunController extends Controller
             //return true;
         }
 
-        //$credentials['password'] = Hash::make($credentials['password']);
-
         return $credentials;
+    }
+
+    public function print()
+    {
+        //dd('test');
+        return Excel::download(new UsersExport, 'invoices.xlsx');
+        //return Excel::download(new UsersExport, 'invoices.xlsx');
     }
 }

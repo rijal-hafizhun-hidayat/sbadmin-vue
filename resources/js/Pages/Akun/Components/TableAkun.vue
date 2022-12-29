@@ -10,7 +10,11 @@
                     <i class="fas fa-plus fa-sm text-white-50"></i>
                     Tambah
                 </Link>
-                <input type="text" placeholder="Cari..." class="ml-auto search" v-model="searchQuery" id="search" autocomplete="off">
+                <input type="text" placeholder="Cari..." class="ml-auto mr-2 search" v-model="searchQuery" id="search" autocomplete="off">
+                <a href="/akun/print" class="d-none d-sm-inline-block btn mb-3 btn-sm btn-success shadow-sm">
+                    <i class="fas fa-print"></i>
+                    Print
+                </a>
             </div>
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -100,9 +104,14 @@ export default {
             Inertia.delete(`/akun/${id}`)
         }
 
+        function print(){
+            window.open(`/akun/print`)
+        }
+
         return {
             searchQuery,
             find,
+            print,
             deleteAkun,
         }
     }
@@ -111,6 +120,7 @@ export default {
 <style scoped>
     .search{
         /* border: none; */
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
+        height: 31px;
     }
 </style>
