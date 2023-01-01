@@ -23111,7 +23111,7 @@ var _hoisted_5 = /*#__PURE__*/_withScopeId(function () {
 });
 var _hoisted_6 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-    href: "/akun/print",
+    href: '/akun/print',
     "class": "d-none d-sm-inline-block btn mb-3 btn-sm btn-success shadow-sm"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
     "class": "fas fa-print"

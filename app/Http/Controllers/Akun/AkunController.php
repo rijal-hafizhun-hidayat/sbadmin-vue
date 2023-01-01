@@ -133,7 +133,7 @@ class AkunController extends Controller
     public function print()
     {
         //dd('test');
-        return Excel::download(new UsersExport, 'invoices.xlsx');
+        return Excel::download(new UsersExport, 'akuns.xlsx');
         //return Excel::download(new UsersExport, 'invoices.xlsx');
     }
 }

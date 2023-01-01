@@ -11,7 +11,7 @@
                     Tambah
                 </Link>
                 <input type="text" placeholder="Cari..." class="ml-auto mr-2 search" v-model="searchQuery" id="search" autocomplete="off">
-                <a href="/akun/print" class="d-none d-sm-inline-block btn mb-3 btn-sm btn-success shadow-sm">
+                <a :href="'/akun/print'" class="d-none d-sm-inline-block btn mb-3 btn-sm btn-success shadow-sm">
                     <i class="fas fa-print"></i>
                     Print
                 </a>
