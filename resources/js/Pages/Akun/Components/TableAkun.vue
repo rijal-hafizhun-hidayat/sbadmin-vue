@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import { computed, onMounted, onUpdated, ref } from '@vue/runtime-core'
+import { computed, onMounted, onUpdated, reactive, ref } from '@vue/runtime-core'
 import { Inertia } from '@inertiajs/inertia';
 import { Link } from '@inertiajs/inertia-vue3'
 import Swal from 'sweetalert2'
@@ -71,6 +71,9 @@ export default {
     setup(props){
 
         const searchQuery = ref('')
+        const isValue = reactive({
+            value: ''
+        })
 
         onMounted(() => {
             if(props.flash){
@@ -111,6 +114,7 @@ export default {
         return {
             searchQuery,
             find,
+            isValue,
             print,
             deleteAkun,
         }

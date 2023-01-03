@@ -21629,6 +21629,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   setup: function setup(props) {
     var searchQuery = (0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_3__.ref)('');
+    var isValue = (0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_3__.reactive)({
+      value: ''
+    });
     (0,_vue_runtime_core__WEBPACK_IMPORTED_MODULE_4__.onMounted)(function () {
       if (props.flash) {
         return sweetalert2__WEBPACK_IMPORTED_MODULE_2___default().fire({
@@ -21664,6 +21667,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       searchQuery: searchQuery,
       find: find,
+      isValue: isValue,
       print: print,
       deleteAkun: deleteAkun
     };
