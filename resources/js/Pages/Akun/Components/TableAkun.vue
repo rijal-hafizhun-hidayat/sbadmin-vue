@@ -5,6 +5,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Data Akun</h6>
         </div>
         <div class="card-body">
+            <p v-if="flash">{{ flash }}</p>
             <div class="d-flex">
                 <Link href="/akun/create" class="d-none d-sm-inline-block btn mb-3 btn-sm btn-primary shadow-sm">
                     <i class="fas fa-plus fa-sm text-white-50"></i>
@@ -76,17 +77,6 @@ export default {
         })
 
         onMounted(() => {
-            if(props.flash){
-                return Swal.fire({
-                    icon: 'success',
-                    title: 'berhasil',
-                    text: props.flash
-                })
-            }
-        })
-
-        //when props updated
-        onUpdated(() => {
             if(props.flash){
                 return Swal.fire({
                     icon: 'success',

@@ -56,7 +56,11 @@ Route::middleware(['AuthIsValid'])->group(function () {
 
     //END akun
 
-    //START akun
+    //START Profile
+
+    Route::get('/profile', [\App\Http\Controllers\Profile\ProfileController::class, 'index'])->name('profile.index');
+
+    //END Profile
 
     //dashboard
     Route::get('/dashboard', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');

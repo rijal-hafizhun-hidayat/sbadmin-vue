@@ -44,22 +44,6 @@ class AkunController extends Controller
 
     public function store(Request $request)
     {
-        // $credentials = $request->validate(
-        //     [
-        //         'name' => 'required',
-        //         'username' => 'required',
-        //         'password' => 'required',
-        //         'role' => 'required'
-        //     ],
-        //     [
-        //         'name.required' => 'name wajib di isi',
-        //         'username.required' => 'username wajib di isi',
-        //         'password.required' => 'password wajib di isi',
-        //         'role.required' => 'role wajib di isi'
-        //     ]
-        // );
-
-        // $credentials['password'] = Hash::make($credentials['password']);
 
         $value = $this->getForm();
 
