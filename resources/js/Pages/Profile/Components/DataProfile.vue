@@ -40,8 +40,11 @@
                     <div class="col-sm-6">
                         <div class="card shadow mb-4">
                             <div class="card-body">
-                                <img src="" alt="" srcset="">
-                                <p>ini halaman gambar</p>
+                                <img class="mx-auto d-block" :src="'/admin/img/undraw_profile.svg'">
+                                <div class="text-center mt-3">
+                                    <p class="font-weight-bold">Rijal Hafizhun Hidayat</p>
+                                    <p>umur 20</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -62,3 +65,8 @@ export default {
     }
 }
 </script>
+<style scoped>
+    img{
+        width: 250px;
+    }
+</style>

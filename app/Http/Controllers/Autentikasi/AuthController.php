@@ -37,6 +37,7 @@ class AuthController extends Controller
 
             $request->session()->put('hasLoggedIn', true);
             $request->session()->put('name', Auth::user()->name);
+            // $request->session()->put('id', Auth::id());
 
             return redirect()->route('dashboard.index');
         }

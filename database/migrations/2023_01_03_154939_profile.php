@@ -16,6 +16,7 @@ class Profile extends Migration
         Schema::create('profile', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->unique();
+            $table->string('nomor_hp');
             $table->timestamps();
         });
     }

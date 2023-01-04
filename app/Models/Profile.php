@@ -13,7 +13,6 @@ class Profile extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'nama',
-        'gender',
         'no_tlp',
         'kk',
         'alamat',
