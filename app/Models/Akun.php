@@ -16,6 +16,11 @@ class Akun extends Model
         'username',
         'email',
         'password',
+        'gambar',
         'role'
+    ];
+
+    protected $hidden = [
+        'password', 'remember_token',
     ];
 }

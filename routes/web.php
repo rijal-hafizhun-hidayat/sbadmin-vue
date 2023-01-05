@@ -59,6 +59,7 @@ Route::middleware(['AuthIsValid'])->group(function () {
     //START Profile
 
     Route::get('/profile', [\App\Http\Controllers\Profile\ProfileController::class, 'index'])->name('profile.index');
+    Route::put('/profile', [\App\Http\Controllers\Profile\ProfileController::class, 'update'])->name('profile.update');
 
     //END Profile
 

@@ -2,7 +2,7 @@
     <div id="page-top">
         <div id="wrapper">
             <SideBar />
-            <DataProfile :nameAkun="nameAkun"/>
+            <DataProfile :nameAkun="nameAkun" :profile="profile"/>
         </div>
     </div>
 </template>
@@ -16,6 +16,7 @@ export default {
     name: 'IndexProfile',
     props: {
         nameAkun: Array,
+        profile: Array
     }
     
 }

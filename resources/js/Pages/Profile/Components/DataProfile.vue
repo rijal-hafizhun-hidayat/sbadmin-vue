@@ -11,18 +11,18 @@
                                 <h6 class="m-0 font-weight-bold text-primary">Profile</h6>
                             </div>
                             <div class="card-body">
-                                <form action="" method="post">
+                                <form @submit.prevent="update" enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label for="nama_depan">Nama Depan</label>
-                                        <input type="text" class="form-control" id="nama_depan">
+                                        <label for="name">Nama</label>
+                                        <input type="text" v-model="profiles.name" class="form-control" id="name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="nama_belakang">Nama Belakang</label>
-                                        <input type="text" class="form-control" id="nama_belakang">
+                                        <label for="username">Username</label>
+                                        <input type="text" v-model="profiles.username" class="form-control" id="username">
                                     </div>
                                     <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input type="email" class="form-control" id="email">
+                                        <input type="email" v-model="profiles.email" class="form-control" id="email">
                                     </div>
                                     <div class="form-group">
                                         <label for="new_password">Password Baru</label>
@@ -31,6 +31,12 @@
                                     <div class="form-group">
                                         <label for="conf_password">Konfirmasi Password</label>
                                         <input type="password" class="form-control" id="conf_password">
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="image" class="col-sm-2 col-form-label">Upload</label>
+                                        <div class="col-sm-10">
+                                            <input type="file" class="mt-1" id="image" @input="profiles.gambar = $event.target.files[0]">
+                                        </div>
                                     </div>
                                     <input class="btn btn-primary btn-sm" type="submit" value="Simpan Perubahan">
                                 </form>
@@ -42,8 +48,9 @@
                             <div class="card-body">
                                 <img class="mx-auto d-block" :src="'/admin/img/undraw_profile.svg'">
                                 <div class="text-center mt-3">
-                                    <p class="font-weight-bold">Rijal Hafizhun Hidayat</p>
-                                    <p>umur 20</p>
+                                    <p class="font-weight-bold">{{ profiles.name }}</p>
+                                    <p v-if="profile.role == 1">admin</p>
+                                    <p v-else>Bendahara</p>
                                 </div>
                             </div>
                         </div>
@@ -57,11 +64,39 @@
 <script>
 import NavBar from '../../Components/NavBar.vue';
 import Footer from '../../Components/Footer.vue';
+import { Inertia } from '@inertiajs/inertia';
+import { reactive } from '@vue/reactivity';
+import { useForm } from '@inertiajs/inertia-vue3';
 export default {
     components: { NavBar, Footer },
     name: 'DataProfile',
     props: {
         nameAkun: Array,
+        profile: Array
+    },
+    setup(props){
+        const profiles = useForm({
+            name: props.profile.name,
+            username: props.profile.username,
+            email: props.profile.email,
+            gambar: null,
+            role: props.profile.role,
+            password: '',
+            konfPassword: '',
+            _method: 'put'
+        })
+        
+
+        function update(){
+            return Inertia.post(`/profile`, profiles, {
+                forceFormData: true,
+            });
+        }
+
+        return{
+            profiles,
+            update
+        }
     }
 }
 </script>
