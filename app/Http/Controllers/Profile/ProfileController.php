@@ -23,7 +23,21 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
-        Akun::where('id', Auth::id())->update($this->catchForm());
+        $catchForm = $this->catchForm();
+
+        if ($request->filled('password')) {
+            $catchForm['password'] = $request->password;
+        }
+
+        if ($request->hasFile('gambar')) {
+            $request->validate([
+                'gambar' => 'mimes:jpeg,png,jpg|max:2048'
+            ]);
+            $catchForm['gambar'] = $request->file('gambar')->getClientOriginalName();
+            $request->file('gambar')->storeAs('public/images', $catchForm['gambar']);
+        }
+
+        Akun::where('id', Auth::id())->update($catchForm);
 
         return redirect()->route('profile.index')->with('message', 'berhasil update data');
     }
@@ -34,25 +48,15 @@ class ProfileController extends Controller
             [
                 'name' => 'required',
                 'username' => 'required',
-                'email' => 'email:rfc,dns',
-                'gambar' => 'image|mimes:jpeg,png,jpg|max:2048'
+                'email' => 'required|email:rfc,dns',
             ],
             [
                 'name.required' => 'name wajib di isi',
                 'username.required' => 'username wajib di isi',
+                'email.required' => 'email wajib di isi',
                 'email.email' => 'email tidak terverifikasi',
-                'gambar.image' => 'file wajib berbentuk gambar',
-                'gambar.mimes' => 'file wajib ber ektensi jpeg, png dan jpg',
-                'gambar.size' => 'size file tidak boleh lebih dari 2mb'
             ]
         );
-
-        $credentials['gambar'] = request()->file('gambar')->getClientOriginalName();
-
-        $credentials['password'] = request()->input('password');
-
-        //store gambar
-        request()->file('gambar')->storeAs('public/images', $credentials['gambar']);
 
         return $credentials;
     }

@@ -21,6 +21,11 @@
                                 <div v-if="errors.username" class="invalid-feedback">{{ errors.username }}</div>
                             </div>
                             <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" :class="{'is-invalid': errors.email}" id="email" v-model="data.email" placeholder="Masukkan Email">
+                                <div v-if="errors.email" class="invalid-feedback">{{ errors.email }}</div>
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleFormControlInput1">Password Baru</label>
                                 <input type="text" class="form-control" v-model="data.password" id="password" placeholder="Masukkan Password">
                             </div>
@@ -60,6 +65,7 @@ export default {
         const data = reactive({
             name: props.akuns.name,
             username: props.akuns.username,
+            email: props.akuns.email,
             password: '',
             role: props.akuns.role
         });
@@ -68,6 +74,7 @@ export default {
             return Inertia.put(`/akun/${props.akuns.id}`,{
                 name: data.name,
                 username: data.username,
+                email: data.email,
                 password: data.password,
                 role: data.role  
             });

@@ -2,7 +2,7 @@
     <div id="page-top">
         <div id="wrapper">
             <SideBar />
-            <DataProfile :nameAkun="nameAkun" :profile="profile"/>
+            <DataProfile :nameAkun="nameAkun" :profile="profile" :errors="errors"/>
         </div>
     </div>
 </template>
@@ -15,6 +15,7 @@ export default {
     components: { LogOut, ScrollToTopButton, SideBar, DataProfile },
     name: 'IndexProfile',
     props: {
+        errors: Object,
         nameAkun: Array,
         profile: Array
     }

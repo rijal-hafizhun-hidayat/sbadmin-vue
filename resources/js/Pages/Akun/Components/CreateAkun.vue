@@ -11,23 +11,28 @@
                     <div class="card-body col-lg-6">
                         <form @submit.prevent="store">
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Nama</label>
+                                <label for="name">Nama</label>
                                 <input type="text" class="form-control" :class="{'is-invalid': errors.name}" v-model="akunAdd.name" id="name" placeholder="Masukkan Nama">
                                 <div v-if="errors.name" class="invalid-feedback">{{ errors.name }}</div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Username</label>
+                                <label for="username">Username</label>
                                 <input type="text" @change="setPass" class="form-control" :class="{'is-invalid': errors.username}" v-model="akunAdd.username" id="username" placeholder="Masukkan Username">
                                 <div v-if="errors.username" class="invalid-feedback">{{ errors.username }}</div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Password</label>
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" :class="{'is-invalid': errors.email}" v-model="akunAdd.email" id="email" placeholder="Masukkan Email">
+                                <div v-if="errors.email" class="invalid-feedback">{{ errors.email }}</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
                                 <input type="text" disabled class="form-control" :class="{'is-invalid': errors.password}" v-model="akunAdd.password" id="password" placeholder="Masukkan Password">
                                 <div v-if="errors.password" class="invalid-feedback">{{ errors.password }}</div>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlSelect1">Role</label>
-                                <select class="form-control" :class="{'is-invalid': errors.role}" v-model="akunAdd.role" id="exampleFormControlSelect1">
+                                <label for="role">Role</label>
+                                <select class="form-control" :class="{'is-invalid': errors.role}" v-model="akunAdd.role" id="role">
                                     <option selected disabled value="">Pilih Role ...</option>
                                     <option value="1">Admin</option>
                                     <option value="0">Bendahara</option>
@@ -63,6 +68,7 @@ export default {
             name: '',
             username: '',
             password: '',
+            email: '',
             role: ''
         });
 
@@ -75,6 +81,7 @@ export default {
                 name: akunAdd.name,
                 username: akunAdd.username,
                 password: akunAdd.password,
+                email: akunAdd.email,
                 role: akunAdd.role  
             });
 

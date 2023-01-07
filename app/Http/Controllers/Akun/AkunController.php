@@ -76,12 +76,15 @@ class AkunController extends Controller
                 'name' => 'required',
                 'username' => 'required',
                 'password' => 'required',
+                'email' => 'required|email:rfc,dns',
                 'role' => 'required'
             ],
             [
                 'name.required' => 'name wajib di isi',
                 'username.required' => 'username wajib di isi',
                 'password.required' => 'password wajib di isi',
+                'email.required' => 'email wajib di isi',
+                'email.email' => 'email tidak terverifikasi',
                 'role.required' => 'role wajib di isi'
             ]
         );

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Autentikasi;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
 
 
@@ -12,9 +13,7 @@ class AuthController extends Controller
 {
     public function index()
     {
-        // $val = Auth::user();
-        // dd(Auth::user()->name);
-        //dd(Auth::user());
+        //dd(Hash::make('admin'));
         return Inertia::render('Login/Index');
     }
 
