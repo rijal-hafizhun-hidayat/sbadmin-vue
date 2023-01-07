@@ -2,7 +2,7 @@
     <div id="page-top">
         <div id="wrapper">
             <SideBar :isShowDashboard="true"/>
-            <Content :name="name"/>
+            <Content :nameAkun="nameAkun"/>
         </div>
     </div>
     <ScrollToTopButton />
@@ -19,7 +19,7 @@ export default {
     components: { SideBar, Content, ScrollToTopButton, LogOut },
     name: 'PagetComponent',
     props: {
-        name: Array
+        nameAkun: Array
     },
     // setup(props){
     //     onMounted(() => {

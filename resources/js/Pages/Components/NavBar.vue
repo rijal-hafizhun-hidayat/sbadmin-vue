@@ -16,9 +16,9 @@
             <li class="nav-item dropdown no-arrow">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ name }}</span>
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ nameAkun.name }}</span>
                     <img class="img-profile rounded-circle"
-                        :src="'/admin/img/undraw_profile.svg'">
+                        :src="showImage()">
                 </a>
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -55,12 +55,20 @@ export default {
     name: 'NavBar',
     components: { Link },
     props: {
-        name: Array // <- nama props yang dibuat di controller saat parsing data
+        nameAkun: Array,
     },
-    // setup(props){
-    //     onMounted(() =>{
-    //         console.log(props.name)
-    //     })
-    // }
+    setup(props){
+        onMounted(() => {
+            console.log(props.nameAkun.gambar)
+        })
+
+        function showImage(){
+            return "/storage/images/"+props.nameAkun.gambar
+        }
+
+        return {
+            showImage
+        }
+    }
 }
 </script>

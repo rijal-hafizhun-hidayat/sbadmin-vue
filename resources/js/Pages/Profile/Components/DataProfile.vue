@@ -1,7 +1,7 @@
 <template>
     <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
-            <NavBar :name="nameAkun"/>
+            <NavBar :name="nameAkun" :imgProfile="profile.gambar"/>
             <div class="container-fluid">
                 <div class="row">
                     <!-- Page Heading -->
@@ -10,7 +10,6 @@
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">Profile</h6>
                             </div>
-                            <p>{{ errors }}</p>
                             <div class="card-body">
                                 <form @submit.prevent="update" enctype="multipart/form-data">
                                     <div class="form-group">
@@ -95,10 +94,6 @@ export default {
                 _method: 'put',
                 forceFormData: true,
             });
-        }
-
-        function showImage(){
-            return '/storage/images/';
         }
 
         return{
