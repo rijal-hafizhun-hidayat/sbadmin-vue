@@ -1,7 +1,7 @@
 <template>
     <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
-            <NavBar :name="nameAkun"/>
+            <NavBar :valueNavbar="valueNavbar"/>
             <div class="container-fluid">
                 <!-- Page Heading -->
                 <div class="card shadow mb-4">
@@ -59,7 +59,7 @@ export default {
     props: {
         errors: Object,
         akuns: Object,
-        nameAkun: Array
+        valueNavbar: Array
     },
     setup(props){
         const data = reactive({

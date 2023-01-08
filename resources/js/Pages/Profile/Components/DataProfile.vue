@@ -1,7 +1,7 @@
 <template>
     <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
-            <NavBar :name="nameAkun" :imgProfile="profile.gambar"/>
+            <NavBar :key="componentKey"/>
             <div class="container-fluid">
                 <div class="row">
                     <!-- Page Heading -->
@@ -10,6 +10,7 @@
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">Profile</h6>
                             </div>
+                            <p>{{ errors }}</p>
                             <div class="card-body">
                                 <form @submit.prevent="update" enctype="multipart/form-data">
                                     <div class="form-group">
@@ -30,7 +31,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="conf_password">Konfirmasi Password</label>
-                                        <input type="password" v-model="profile.konfPassword" class="form-control" id="conf_password">
+                                        <input type="password" v-model="profiles.konfPassword" class="form-control" id="conf_password">
                                     </div>
                                     <div class="form-group row">
                                         <label for="image" class="col-sm-2 col-form-label">Upload</label>
@@ -46,7 +47,7 @@
                     <div class="col-sm-6">
                         <div class="card shadow mb-4">
                             <div class="card-body">
-                                <img class="mx-auto d-block" :src="profiles.urlImg">
+                                <img class="mx-auto d-block" :src="showImg()">
                                 <div class="text-center mt-3">
                                     <p class="font-weight-bold">{{ profiles.name }}</p>
                                     <p v-if="profile.role == 1">admin</p>
@@ -66,13 +67,12 @@ import NavBar from '../../Components/NavBar.vue';
 import Footer from '../../Components/Footer.vue';
 import { Inertia } from '@inertiajs/inertia';
 import { useForm } from '@inertiajs/inertia-vue3';
-import { reactive } from '@vue/reactivity';
+import { reactive, ref } from '@vue/reactivity';
 export default {
     components: { NavBar, Footer },
     name: 'DataProfile',
     props: {
         errors: Object,
-        nameAkun: Array,
         profile: Array
     },
     setup(props){
@@ -80,14 +80,13 @@ export default {
             name: props.profile.name,
             username: props.profile.username,
             email: props.profile.email,
-            gambar: '',
             role: props.profile.role,
             newPassword: '',
             konfPassword: '',
-            urlImg: '/storage/images/'+props.profile.gambar
         })
-        
 
+        const componentKey = ref(0)
+        
         function update(){
             //console.log(profiles);
             return Inertia.post(`/profile`, profiles, {
@@ -96,8 +95,14 @@ export default {
             });
         }
 
+        function showImg(){
+            return "/storage/images/"+props.profile.gambar
+        }
+
         return{
             profiles,
+            componentKey,
+            showImg,
             update
         }
     }

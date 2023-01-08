@@ -67,6 +67,11 @@ Route::middleware(['AuthIsValid'])->group(function () {
     Route::get('/dashboard', [\App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');
 
     //END akun
+
+    Route::get('/service/image', [\App\Http\Controllers\Services\ServicesController::class, 'getValueDB'])->name('services.getValueDB');
+
+    //START service
+
 });
 
 // Route::get('/', function () {

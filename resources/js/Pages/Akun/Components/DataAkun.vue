@@ -1,7 +1,7 @@
 <template>
     <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
-            <NavBar :name="nameAkun"/>
+            <NavBar :valueNavbar="valueNavbar"/>
             <div class="container-fluid">
                 <!-- Page Heading -->
                 <!-- <div v-if="flash">{{ flash }}</div> -->
@@ -21,8 +21,8 @@ export default {
     components: { NavBar, Footer, TableAkun },
     props: {
         akuns: Array,
-        nameAkun: Array,
-        flash: String
+        flash: String,
+        valueNavbar: Array
     },
 }
 </script>

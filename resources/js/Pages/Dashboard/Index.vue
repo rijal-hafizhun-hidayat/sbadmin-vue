@@ -1,5 +1,5 @@
 <template>
-    <PageComponent :nameAkun="nameAkun"/>
+    <PageComponent :valueDashboard="nameAkun"/>
 </template>
 
 <script>

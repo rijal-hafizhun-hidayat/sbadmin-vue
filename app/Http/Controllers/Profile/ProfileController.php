@@ -12,12 +12,10 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        //dd(Auth::id());
-        //dd(Akun::find(Auth::id()));
+        $get = Akun::find(Auth::id());
         return Inertia::render('Profile/Index', [
-            'profile'   => Akun::find(Auth::id()),
-            'nameAkun'  => session(('name')),
-            'page'      => 'IndexProfile'
+            'profile' => $get,
+            'page' => 'IndexProfile'
         ]);
     }
 
@@ -25,17 +23,25 @@ class ProfileController extends Controller
     {
         $catchForm = $this->catchForm();
 
-        if ($request->filled('password')) {
-            $catchForm['password'] = $request->password;
+        //dd($request->newPassword, $request->konfPassword);
+
+        if ($request->filled('newPassword') || $request->filled('konfPassword')) {
+            if ($request->newPassword === $request->konfPassword) {
+                //dd(true)
+                $catchForm['password'] = $request->newPassword;
+            }
         }
 
         if ($request->hasFile('gambar')) {
             $request->validate([
                 'gambar' => 'mimes:jpeg,png,jpg|max:2048'
             ]);
+
             $catchForm['gambar'] = $request->file('gambar')->getClientOriginalName();
             $request->file('gambar')->storeAs('public/images', $catchForm['gambar']);
         }
+
+        dd($catchForm);
 
         Akun::where('id', Auth::id())->update($catchForm);
 

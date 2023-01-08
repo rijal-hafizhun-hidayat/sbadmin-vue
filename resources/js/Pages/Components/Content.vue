@@ -5,7 +5,7 @@
         <!-- Main Content -->
         <div id="content">
 
-            <NavBar :nameAkun="nameAkun"/>
+            <NavBar :valueNavbar="valueDashboard"/>
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
@@ -47,7 +47,7 @@ export default {
     components: { NavBar, Card, Chart, Footer },
     name: 'Content',
     props: {
-        nameAkun: Array
+        valueDashboard: Array
     },
     // setup(props){
     //     onMounted(() => {

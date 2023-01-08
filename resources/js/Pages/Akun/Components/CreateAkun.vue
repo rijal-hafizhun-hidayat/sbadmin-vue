@@ -1,7 +1,7 @@
 <template>
     <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
-            <NavBar :name="nameAkun"/>
+            <NavBar />
             <div class="container-fluid">
                 <!-- Page Heading -->
                 <div class="card shadow mb-4">
@@ -61,7 +61,7 @@ export default {
     props: {
         errors: Object,
         akuns: Array,
-        nameAkun: Array
+        valueNavbar: Array
     },
     setup(props){
         const akunAdd = reactive({
@@ -71,6 +71,10 @@ export default {
             email: '',
             role: ''
         });
+
+        onMounted(() => {
+            console.log(props.valueNavbar)
+        })
 
         function setPass(){
             return akunAdd.password = akunAdd.username + Math.ceil(Math.random()*10000) + '@admin'
@@ -84,8 +88,6 @@ export default {
                 email: akunAdd.email,
                 role: akunAdd.role  
             });
-
-            console.log(save)
         }
 
         return {

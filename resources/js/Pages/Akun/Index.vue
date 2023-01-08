@@ -6,9 +6,16 @@
             <!-- start conditional component-->
             <!-- <div v-if="$page.props.flash.message">{{ $page.props.flash.message }}</div> -->
 
-            <DataAkun v-if="page === 'IndexAkun'" :akuns="akuns" :nameAkun="nameAkun" :flash="$page.props.flash.message"/>
-            <CreateAkun v-if="page === 'CreateAkun'" :nameAkun="nameAkun" :errors="errors"/>
-            <ShowAkun v-if="page === 'ShowAkun'" :akuns="akuns" :nameAkun="nameAkun" :errors="errors"/>
+            <DataAkun v-if="page === 'IndexAkun'" 
+                :akuns="akuns"
+                :flash="$page.props.flash.message"/>
+
+            <CreateAkun v-if="page === 'CreateAkun'"
+                :errors="errors"/>
+
+            <ShowAkun v-if="page === 'ShowAkun'"
+                :akuns="akuns"
+                :errors="errors"/>
             
             <!-- finisih conditional component-->
 
@@ -36,12 +43,13 @@ export default {
         nameAkun: Array,
         errors: Object,
         flash: Object,
-        page: String
+        page: String,
+        valueNavbar: Array
     },
     setup(props){
         const message = computed(() => usePage().props.value.flash.message)
         onMounted(() => {
-            console.log(props.flash)
+            console.log(props.valueNavbar)
         })
         
         return {

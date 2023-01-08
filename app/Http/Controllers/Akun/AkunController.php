@@ -18,8 +18,8 @@ class AkunController extends Controller
         $akun = Akun::latest()->get();
         //dd($akun);
         return Inertia::render('Akun/Index', [
+            'valueNavbar' => request()->session()->all(),
             'akuns' => $akun,
-            'nameAkun' => session(('name')),
             'page' => 'IndexAkun'
         ]);
     }
@@ -27,7 +27,6 @@ class AkunController extends Controller
     public function create()
     {
         return Inertia::render('Akun/Index', [
-            'nameAkun' => session(('name')),
             'page' => 'CreateAkun'
         ]);
     }
@@ -37,7 +36,6 @@ class AkunController extends Controller
         //dd(Akun::find($id));
         return Inertia::render('Akun/Index', [
             'akuns' => Akun::find($id),
-            'nameAkun' => session(('name')),
             'page' => 'ShowAkun'
         ]);
     }
