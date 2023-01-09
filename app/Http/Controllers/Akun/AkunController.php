@@ -15,11 +15,20 @@ class AkunController extends Controller
 {
     public function index()
     {
-        $akun = Akun::latest()->get();
+        //$akun = Akun::latest()->get();
         //dd($akun);
+        $items = Akun::paginate(1)->through(function ($item) {
+            return [
+                'id' => $item->id,
+                'name' => $item->name,
+                'username' => $item->username
+            ];
+        });
+
+        //dd($items);
         return Inertia::render('Akun/Index', [
             'valueNavbar' => request()->session()->all(),
-            'akuns' => $akun,
+            'akuns' => $items,
             'page' => 'IndexAkun'
         ]);
     }

@@ -52,6 +52,7 @@
                     </tbody>
                 </table>
             </div>
+            <Pagination :links="akuns.links"/>
         </div>
     </div>
 </template>
@@ -61,10 +62,11 @@ import { computed, onMounted, onUpdated, reactive, ref } from '@vue/runtime-core
 import { Inertia } from '@inertiajs/inertia';
 import { Link } from '@inertiajs/inertia-vue3'
 import Swal from 'sweetalert2'
+import Pagination from '../../Components/Pagination.vue';
 
 export default {
     name: 'TableAkun',
-    components: { Link },
+    components: { Link, Pagination },
     props: {
         akuns: Array,
         flash: String
@@ -87,7 +89,7 @@ export default {
         })
 
         const find = computed(() => {
-            return props.akuns.filter((akun) => {
+            return props.akuns.data.filter((akun) => {
                 return akun.name.toLowerCase().indexOf(searchQuery.value.toLowerCase()) != -1
             })
         })
