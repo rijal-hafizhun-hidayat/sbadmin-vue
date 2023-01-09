@@ -1,12 +1,11 @@
 <template>
-    <div v-if="links.length > 1">
-        <div>
-            <template v-for="(link, key) in links" :key="key">
-                <div v-if="link.url === null" v-html="link.label" />
-                <Link v-else :href="link.url" v-html="link.label" />
-            </template>
-        </div>
-    </div>
+   <Component 
+        :is="link.url ? 'Link' : 'span'"
+        v-for="link in links"
+        :href="link.url"
+        v-html="link.label"
+        class="px-2"
+        :class="{ 'text-dark': ! link.url, 'font-weight-bold' : link.active }"/>
 </template>
 <script>
 import { Link } from '@inertiajs/inertia-vue3';

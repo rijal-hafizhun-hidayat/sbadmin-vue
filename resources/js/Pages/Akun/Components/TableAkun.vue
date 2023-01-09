@@ -68,7 +68,7 @@ export default {
     name: 'TableAkun',
     components: { Link, Pagination },
     props: {
-        akuns: Array,
+        akuns: Object,
         flash: String
     },
     setup(props){

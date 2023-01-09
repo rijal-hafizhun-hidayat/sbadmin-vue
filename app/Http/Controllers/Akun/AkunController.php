@@ -15,9 +15,7 @@ class AkunController extends Controller
 {
     public function index()
     {
-        //$akun = Akun::latest()->get();
-        //dd($akun);
-        $items = Akun::paginate(1)->through(function ($item) {
+        $items = Akun::paginate(10)->through(function ($item) {
             return [
                 'id' => $item->id,
                 'name' => $item->name,
